@@ -1,0 +1,36 @@
+# Compiled Source #
+###################
+*.exe
+*.o
+*.so
+*.la
+*.dll
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs #
+########
+*.log
+*.stackdump
+
+# VIM Files #
+#############
+*.swp
+*.swn
+*.swm
+*.swo
+
+# BUILD_DIR #
+#############
+build/*
+
+tags
