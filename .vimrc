@@ -83,7 +83,7 @@ set suffixes+=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.
 set wildignore+=*.bak,~*,*.swp,*.o,*.info,*.aux,*.log,*.dvi,*.bbl,*.blg,*.brf,*.cb,*.ind,*.idx,*.ilg,*.inx,*.out,*.toc,*.pyc
 
 " Highlight the textwidth+1 column. In python files commonly is the 80th column
-"set colorcolumn=+1
+set colorcolumn=+1
 
 set nobackup
 set noswapfile
