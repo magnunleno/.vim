@@ -41,12 +41,15 @@ if has("gui_running")
     " No toobar or Menu (someone use it?)
     set guioptions-=T
     set guioptions-=m
+    " No left and right scrollbar
+    set guioptions-=r
+    set guioptions-=L
+    " I'm currently testing this font...
+    set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 else
     colorscheme desert
 endif
 
-" I'm currently testing this font...
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 
 " Shows line numbers
 set number
