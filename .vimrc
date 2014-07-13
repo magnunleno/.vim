@@ -96,8 +96,6 @@ set splitright
 " Set up a environment variable for ftplugin/python.vim
 " let $PYRC="~/.vim/ftplugin/python.vim"
 "}}}
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Filetype Setups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,7 +107,6 @@ augroup filetypedetect
 augroup END
 
 "}}}
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 My Bundles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -200,5 +197,7 @@ inoremap <C-s> <esc>:w<cr>a
 " Disable the del and backspace (maybe I'll give them an usage in the future)
 vnoremap <Del> <nop>
 vnoremap <BS> <nop>
+
+vnoremap <tab> %
 
 "}}}
