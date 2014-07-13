@@ -114,6 +114,10 @@ augroup END
 "                                 My Bundles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "{{{
+Plugin 'fugitive.vim'
+Plugin 'tpope/vim-dispatch'
+Plugin 'bling/vim-airline'
+Plugin 'terryma/vim-smooth-scroll'
 
 " TODO: Retest every plugin :(
 
