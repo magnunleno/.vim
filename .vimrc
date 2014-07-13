@@ -2,7 +2,7 @@
 " vim: et:tw=79:sw=4:ts=4:sts=4
 "
 " File: ~/.vimrc
-" Author: Magnun Leno <magnun at codecommunity dot org>
+" Author: Magnun Leno <magnun dot leno at gmail dot com>
 " Copyright: GPLv3
 " Description: List of settings for VIM setup
 
