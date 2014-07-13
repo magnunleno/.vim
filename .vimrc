@@ -106,8 +106,6 @@ augroup filetypedetect
     autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
     autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
     autocmd BufNewFile,BufRead *.trl setfiletype trl 
-    autocmd BufNewFile *.trl 0read ~/.vim/templates/trl.tpl
-    autocmd BufNewFile *.trl 0read ~/.vim/templates/trl.tpl
 augroup END
 
 "}}}
