@@ -39,6 +39,8 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'Raimondi/delimitMate'
 " Creates Argument object
 Plugin 'argtextobj.vim'
+" Fuzzy finder
+Plugin 'kien/ctrlp.vim'
 
 " TODO: Retest every plugin :(
 
