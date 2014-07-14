@@ -34,6 +34,8 @@ Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-smooth-scroll'
 " TODO:  Customize surround
 Plugin 'surround.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " TODO: Retest every plugin :(
 
