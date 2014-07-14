@@ -115,6 +115,8 @@ Plugin 'fugitive.vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bling/vim-airline'
 Plugin 'terryma/vim-smooth-scroll'
+" TODO:  Customize surround
+Plugin 'surround.vim'
 
 " TODO: Retest every plugin :(
 
