@@ -54,8 +54,8 @@ set wrap linebreak
 set laststatus=2
 " I don't like \ as a leader.
 let mapleader=","
-" Eable folding and set it to use the marker 
-set foldenable foldmethod=marker 
+" Eable folding and set it to use the marker
+set foldenable foldmethod=marker
 " Set hidden buffers
 set hidden
 " More powerful backspacing
@@ -112,9 +112,9 @@ nnoremap <C-Tab> :bn<CR>
 nnoremap <C-S-Tab> :bp<CR>
 " Disable HLSearch with <leader>/
 noremap <silent> <leader>/ :nohlsearch<CR>
-" Set en spell 
+" Set en spell
 nnoremap <leader>en :setlocal spell spelllang=en<CR>
-" Set pt spell 
+" Set pt spell
 nnoremap <leader>pt :setlocal spell spelllang=pt<CR>
 " Map quickfix commands (:cnext and :cNext) to ]e and [e
 nnoremap ]e :cnext<CR>
