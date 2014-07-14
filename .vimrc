@@ -41,6 +41,8 @@ Plugin 'surround.vim' " TODO:  Customize surround
 " Snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+" Visual marks and some nice mappings
+Plugin 'kshenoy/vim-signature'
 
 " TODO: Retest every plugin :(
 
