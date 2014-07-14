@@ -9,6 +9,11 @@
 " Vundle and Plugins bootstrap/settings
 source ~/.vim/bundles.vim
 
+" Some accelerators
+let $PLUGINS='~/.vim/bundles.vim'
+let $PYTHON='~/.vim/confs/python.vim'
+let $RST='~/.vim/confs/rst.vim'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              General Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
