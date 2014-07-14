@@ -28,12 +28,17 @@ let g:vundle_default_git_proto = 'http'
 "                                 My Bundles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "{{{
+" GIT Integration
 Plugin 'fugitive.vim'
+" Asynchronous calls
 Plugin 'tpope/vim-dispatch'
+" Nice status line
 Plugin 'bling/vim-airline'
+" Smooth scrolling
 Plugin 'terryma/vim-smooth-scroll'
-" TODO:  Customize surround
-Plugin 'surround.vim'
+" Surrounding tags
+Plugin 'surround.vim' " TODO:  Customize surround
+" Snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
