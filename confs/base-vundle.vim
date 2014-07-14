@@ -37,6 +37,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'kshenoy/vim-signature'
 " Automatically adds delimits
 Plugin 'Raimondi/delimitMate'
+" Creates Argument object
+Plugin 'argtextobj.vim'
 
 " TODO: Retest every plugin :(
 
