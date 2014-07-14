@@ -77,16 +77,11 @@ set splitbelow splitright
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
 " set wildmode=longest,list
-" Set up a environment variable for ftplugin/python.vim
-" let $PYRC="~/.vim/ftplugin/python.vim"
-"}}}
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              Filetype Setups
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"{{{
+
+" Settigns for specific filetype
 augroup filetypedetect
     autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
-    autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
+    autocmd BufNewFile,BufRead *.py source ~/.vim/confs/python.vim
 augroup END
 
 "}}}
