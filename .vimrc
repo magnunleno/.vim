@@ -7,7 +7,7 @@
 " Description: List of settings for VIM setup
 
 " Vundle and Plugins bootstrap/settings
-source ~/.vim/confs/base-vundle.vim
+source ~/.vim/bundles.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              General Settings
