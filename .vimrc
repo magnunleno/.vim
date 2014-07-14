@@ -73,10 +73,11 @@ set colorcolumn=+1
 set nobackup noswapfile
 " Fix split positioning
 set splitbelow splitright
+" Complet matching text and show list
+set wildmode=list:longest,full
 
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
-" set wildmode=longest,list
 
 " Settigns for specific filetype
 augroup filetypedetect
