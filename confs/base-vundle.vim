@@ -35,6 +35,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Visual marks and some nice mappings
 Plugin 'kshenoy/vim-signature'
+" Automatically adds delimits
+Plugin 'Raimondi/delimitMate'
 
 " TODO: Retest every plugin :(
 
@@ -70,4 +72,10 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+"
+" DelimitMate settings
+let b:delimitMate_expand_cr = 1
+let b:delimitMate_expand_space = 1
+
+
 "}}}
