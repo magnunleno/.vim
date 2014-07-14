@@ -132,11 +132,10 @@ set wildignore+=*.bak,~*,*.swp,*.o,*.info,*.aux,*.log,*.dvi,*.bbl,*.blg,*.brf,*.
 
 " Highlight the textwidth+1 column. In python files commonly is the 80th column
 set colorcolumn=+1
-
-set nobackup
-set noswapfile
-set splitbelow
-set splitright
+" Disable backup and swapfile
+set nobackup noswapfile
+" Fix split positioning
+set splitbelow splitright
 
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
