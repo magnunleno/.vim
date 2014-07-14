@@ -83,6 +83,7 @@ set wildmode=list:longest,full
 augroup filetypedetect
     autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
     autocmd BufNewFile,BufRead *.py source ~/.vim/confs/python.vim
+    autocmd BufNewFile,BufRead *.rst source ~/.vim/confs/rst.vim
 augroup END
 
 "}}}
