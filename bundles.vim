@@ -38,7 +38,7 @@ Plugin 'kshenoy/vim-signature'
 " Automatically adds delimits
 Plugin 'Raimondi/delimitMate'
 " Creates Argument object
-Plugin 'argtextobj.vim'
+Plugin 'jesseschalken/list-text-object'
 " Fuzzy finder
 Plugin 'kien/ctrlp.vim'
 
