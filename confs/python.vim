@@ -1,7 +1,6 @@
 " Vim filetype plugin file
 " Language:	python
-
-if exists("b:did_ftplugin") | finish | endif
+"
 let b:did_ftplugin = 1
 let b:delimitMate_expand_cr = 1
 let b:delimitMate_nesting_quotes = ['"',"'"]
