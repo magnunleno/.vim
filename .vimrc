@@ -71,7 +71,8 @@ set history=200
 " These are files we are not likely to want to edit or read.
 set suffixes+=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.pyc
 set wildignore+=*.bak,~*,*.swp,*.o,*.info,*.aux,*.log,*.dvi,*.bbl,*.blg,*.brf,*.cb,*.ind,*.idx,*.ilg,*.inx,*.out,*.toc,*.pyc
-
+" Remove fillchars
+set fillchars=
 " Highlight the textwidth+1 column. In python files commonly is the 80th column
 set colorcolumn=+1
 " Disable backup and swapfile
