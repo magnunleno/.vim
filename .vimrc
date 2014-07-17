@@ -6,6 +6,9 @@
 " Copyright: GPLv3
 " Description: List of settings for VIM setup
 
+" I don't like \ as a leader.
+let mapleader=","
+
 " Vundle and Plugins bootstrap/settings
 source ~/.vim/bundles.vim
 
@@ -57,8 +60,6 @@ set scrolloff=4
 set wrap linebreak
 " Always shows the status line
 set laststatus=2
-" I don't like \ as a leader.
-let mapleader=","
 " Eable folding and set it to use the marker
 set foldenable foldmethod=marker
 " Set hidden buffers
