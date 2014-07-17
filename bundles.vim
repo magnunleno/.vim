@@ -41,6 +41,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'jesseschalken/list-text-object'
 " Fuzzy finder
 Plugin 'kien/ctrlp.vim'
+" Jellybeans Theme
+Plugin 'nanotech/jellybeans.vim'
 
 " TODO: Retest every plugin :(
 
