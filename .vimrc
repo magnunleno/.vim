@@ -29,7 +29,7 @@ set hlsearch incsearch smartcase
 " Hum... Nice clothes
 if has("gui_running")
     "colorscheme xoria256
-    colorscheme jellybeans+
+    colorscheme jellybeans++
     " No toobar or Menu (someone use it?)
     set guioptions-=T
     set guioptions-=m
