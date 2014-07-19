@@ -17,4 +17,7 @@ hi  ColorColumn  guibg=#171717
 
 " Fix folded light color in GVIM
 hi  Folded 	 guibg=#1f1f1f
+
+" Remove underline from SpellBad
+hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red
 "}}}
