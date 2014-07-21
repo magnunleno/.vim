@@ -1,0 +1,120 @@
+snippet header
+${1:Section name}
+`!p snip.rv = len(t[1])*'#'`
+:date: ${2:`date "+%Y-%m-%d %H:%M"`}
+:category: $3
+:tags: $4
+:image: $5
+:series: $6
+:description: $7
+
+$0
+endsnippet
+
+snippet img
+.. image:: {filename}/images/$1
+        :target: {filename}/images/$1
+        :alt: $2
+        :align: center
+
+$0
+endsnippet
+
+snippet fig
+.. figure:: {filename}/images/$1
+        :target: {filename}/images/$1
+        :alt: $2
+        :align: center
+
+	${2}
+
+	${3:Description}
+
+$0
+endsnippet
+
+snippet more
+.. more
+
+$0
+endsnippet
+
+snippet py
+.. code-block:: python
+
+	$1
+
+$0
+endsnippet
+
+snippet c
+.. code-block:: c
+
+	$1
+
+$0
+endsnippet
+
+snippet bash
+.. code-block:: bash
+
+	$1
+
+$0
+endsnippet
+
+snippet h2
+${1:Section name}
+`!p snip.rv = len(t[1])*'-'`
+
+$0
+endsnippet
+
+snippet h3
+${1:Section name}
+`!p snip.rv = len(t[1])*'^'`
+
+$0
+endsnippet
+
+snippet h4
+${1:Section name}
+`!p snip.rv = len(t[1])*'~'`
+
+$0
+endsnippet
+
+snippet h5
+${1:Section name}
+`!p snip.rv = len(t[1])*'\`'`
+
+$0
+endsnippet
+
+snippet h6
+${1:Section name}
+`!p snip.rv = len(t[1])*'\''`
+
+$0
+endsnippet
+
+snippet table
+.. table::
+        :class: table
+
+	`!p snip.rv = max(len(t[1]), len(t[2]))*'='`
+        $1
+	`!p snip.rv = max(len(t[1]), len(t[2]))*'='`
+	$2
+	`!p snip.rv = max(len(t[1]), len(t[2]))*'='`
+
+$0
+endsnippet
+
+snippet code
+\`\`${VISUAL}${1}\`\`$2
+endsnippet
+
+snippet v
+\`\`${VISUAL}\`\`$2
+endsnippet
