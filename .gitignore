@@ -35,3 +35,7 @@ build/*
 
 tags
 bundle
+
+spell
+
+.netrwhist
