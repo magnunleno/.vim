@@ -12,6 +12,12 @@ hi  VertSplit 	 guibg=#121212
 " Set Line Number backgroup just like VertSplit
 hi  LineNr 	 guibg=#121212
 
+" Set Sign Column to the same color of LineNr
+hi  SignColumn   guibg=#121212
+
+" Better Error
+hi Error guibg=#121212 guifg=Red
+
 " Fix ColorColumn definition in GVIM
 hi  ColorColumn  guibg=#171717
 
@@ -19,5 +25,5 @@ hi  ColorColumn  guibg=#171717
 hi  Folded 	 guibg=#1f1f1f
 
 " Remove underline from SpellBad
-hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red
+hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red guibg=#151515
 "}}}
