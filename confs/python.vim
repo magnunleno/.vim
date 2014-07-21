@@ -4,6 +4,15 @@
 let b:did_ftplugin = 1
 let b:delimitMate_expand_cr = 1
 let b:delimitMate_nesting_quotes = ['"',"'"]
+let g:switch_definitions = [
+	\   ['True', 'False'],
+	\   [' == ', ' is ', ' < ', ' > ', ' <= ', ' >= '],
+	\ {
+	\	'^\(\s*\)if \(.?*\):' : '\1elif \2:',
+	\	'^\(\s*\)elif \(.?*\):' : '\1else:'
+	\ },
+	\ ['list(','tuple(', 'set(', 'frozenset(']
+	\ ]
 
 setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 autoindent
 setlocal nowrap

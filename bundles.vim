@@ -41,6 +41,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'jesseschalken/list-text-object'
 " Fuzzy finder
 Plugin 'kien/ctrlp.vim'
+" Cycles throught predefined keywords/matches
+Plugin 'AndrewRadev/switch.vim'
 " Jellybeans Theme
 Plugin 'nanotech/jellybeans.vim'
 
@@ -91,6 +93,6 @@ let b:delimitMate_expand_cr=1
 let b:delimitMate_expand_space=1
 let b:delimitMate_expand_inside_quotes=1
 
-
-
+" Switch.vim settings {{{
+nnoremap <silent> <leader>s :Switch<CR>
 "}}}
