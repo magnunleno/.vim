@@ -43,6 +43,8 @@ Plugin 'jesseschalken/list-text-object'
 Plugin 'kien/ctrlp.vim'
 " Cycles throught predefined keywords/matches
 Plugin 'AndrewRadev/switch.vim'
+" Rainbow parenthesis
+Plugin 'oblitum/rainbow'
 " Jellybeans Theme
 Plugin 'nanotech/jellybeans.vim'
 

@@ -49,3 +49,5 @@ endfun
 
 nnoremap <buffer> <leader>r :w<CR>:!/usr/bin/env python3 %<CR>
 nnoremap <buffer> <leader>r2 :w<CR>:!/usr/bin/env python2 %<CR>
+
+call rainbow#load()
