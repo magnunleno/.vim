@@ -43,6 +43,8 @@ Plugin 'jesseschalken/list-text-object'
 Plugin 'kien/ctrlp.vim'
 " Cycles throught predefined keywords/matches
 Plugin 'AndrewRadev/switch.vim'
+" Syntastic
+Plugin 'scrooloose/syntastic'
 " Rainbow parenthesis
 Plugin 'oblitum/rainbow'
 " Jellybeans Theme
@@ -99,4 +101,12 @@ let b:delimitMate_expand_inside_quotes=1
 
 " Switch.vim settings {{{
 nnoremap <silent> <leader>s :Switch<CR>
+"}}}
+"
+" syntastic settings {{{
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 3
 "}}}
