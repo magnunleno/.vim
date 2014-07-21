@@ -97,6 +97,11 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 vmap s S
 "}}}
 
+" Ultisnips settings {{{
+let g:UltiSnipsEditSplit="vertical"
+nnoremap <silent> <leader>S :UltiSnipsEdit<CR>
+"}}}
+
 " DelimitMate settings {{{
 let b:delimitMate_expand_cr=1
 let b:delimitMate_expand_space=1
