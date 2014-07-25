@@ -26,4 +26,8 @@ hi  Folded 	 guibg=#1f1f1f
 
 " Remove underline from SpellBad
 hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red guibg=#151515
+
+" Hide tilde
+hi  NonText      guifg=bg
+
 "}}}
