@@ -1,0 +1,130 @@
+#! header
+snippet #!2 "Shebang header for python 2 scripts" b
+#!/usr/bin/env python
+# encoding: utf-8
+$0
+endsnippet
+
+snippet #!3 "Shebang header for python 3 scripts" b
+#!/usr/bin/env python3
+# encoding: utf-8
+$0
+endsnippet
+
+## Functions
+snippet defv "function with VISUAL" b
+def ${1:function}(${2:args})
+	${VISUAL}${0}
+endsnippet
+
+snippet def* "function with *args and VISUAL" b
+def ${1:function}(*args)
+	${VISUAL}${0}
+endsnippet
+
+snippet def** "function with **kwargs and VISUAL" b
+def ${1:function}(**kwargs)
+	${VISUAL}${0}
+endsnippet
+
+snippet def*** "function with *args, **kwargs and VISUAL" b
+def ${1:function}(*args, **kwargs)
+	${VISUAL}${0}
+endsnippet
+
+## Class Functions
+snippet defs "class function with VISUAL" b
+def ${1:function}(self, ${2:args})
+	${VISUAL}${0}
+endsnippet
+
+snippet defs* "class function with *args and VISUAL" b
+def ${1:function}(self, *args)
+	${VISUAL}${0}
+endsnippet
+
+snippet defs** "class function with **kwargs and VISUAL" b
+def ${1:function}(self, **kwargs)
+	${VISUAL}${0}
+endsnippet
+
+snippet defs*** "class function with *args, **kwargs and VISUAL" b
+def ${1:function}(self, *args, **kwargs)
+	${VISUAL}${0}
+endsnippet
+
+##########################
+#    If / Elif / Else    #
+##########################
+snippet if "if block with visual selection" b
+if ${1:condition}:
+	${VISUAL}${2}
+${0}
+endsnippet
+
+snippet ife "If/Else with visual selection" b
+if ${1:condition}:
+	${VISUAL}${2}
+else:
+	${3}
+endsnippet
+
+snippet ifee "If/Elif/Else with visual selection" b
+if ${1:condition}:
+	${VISUAL}${2:pass}
+elif ${3:condition}:
+	${4:pass}
+else:
+	${5:pass}
+endsnippet
+
+snippet else "else block with visual selection" b
+else:
+	${VISUAL}${2}
+${0}
+endsnippet
+
+snippet elif "elif block with visual selection" b
+elif ${1}:
+	${VISUAL}${2}
+${0}
+endsnippet
+
+##########################
+# Try / Except / Finally #
+##########################
+snippet try "Try / Except with VISUAL" b
+try:
+	${VISUAL}${1}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+endsnippet
+
+snippet tryee "Try / Except / Else with VISUAL" b
+try:
+	${VISUAL}${1}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+endsnippet
+
+snippet tryef "Try / Except / Finally with VISUAL" b
+try:
+	${VISUAL}${1}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}
+endsnippet
+
+snippet tryeef "Try / Except / Else / Finally with VISUAL" b
+try:
+	${VISUAL}${1}
+except${2: ${3:Exception}, ${4:e}}:
+	${5:raise}
+else:
+	${6:pass}
+finally:
+	${7:pass}
+endsnippet
