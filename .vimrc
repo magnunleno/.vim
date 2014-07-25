@@ -81,6 +81,8 @@ set nobackup noswapfile
 set splitbelow splitright
 " Complet matching text and show list
 set wildmode=list:longest,full
+" Disable preview window (faster navigation in completitions)
+set completeopt-=preview
 
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,

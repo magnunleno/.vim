@@ -49,6 +49,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'oblitum/rainbow'
 " Jellybeans Theme
 Plugin 'nanotech/jellybeans.vim'
+" YouCompleteMe
+" Also install: build-essential cmake python-dev clang-3.4
+Plugin 'Valloric/YouCompleteMe'
 
 " TODO: Retest every plugin :(
 
@@ -111,11 +114,20 @@ let b:delimitMate_expand_inside_quotes=1
 " Switch.vim settings {{{
 nnoremap <silent> <leader>s :Switch<CR>
 "}}}
-"
+
 " syntastic settings {{{
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_loc_list_height = 3
+"}}}
+
+" YouCompleteMe settings {{{
+nnoremap <silent> <C-]> :YcmCompleter GoTo<CR>
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+let g:ycm_add_preview_to_completeopt=0
+set completeopt-=preview
+
 "}}}
