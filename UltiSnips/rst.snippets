@@ -118,3 +118,142 @@ endsnippet
 snippet v
 \`\`${VISUAL}\`\`$2
 endsnippet
+
+## Python interpreter in VIM
+global !p
+import string, vim
+import textwrap
+
+_snips_fns = {}
+
+
+def py(*args):
+    import re
+    old_a = vim.eval('@a')
+
+    cmd = ' '.join(args)
+    if cmd.startswith('print '):
+        cmd = cmd[5:]
+    splits = re.split('\s', cmd)
+
+    if py.last_cmd != cmd:
+        vim.command('let @a=""')
+        vim.command('redir @a')
+
+        vim.command("""py
+out = []
+try:
+    gs = globals()
+    out.append(str(eval(''' {0} '''.strip())))
+    if out[-1].startswith('<built-in'):
+        out.pop[0]
+except Exception as e:
+    print e.message
+    try:
+        exec(''' {0} '''.strip())
+    except:
+        import keyword
+        import __builtin__
+        cmd = ''' {0} '''.strip()
+        text = ''' {1} '''.strip()
+
+        if text:
+            if text.endswith('?'):
+                try:
+                    exec('help(%s)' % text.rstrip('?'))
+                except:
+                    pass
+            elif '.' in text:
+
+               def get_class_members(klass):
+                   ret = dir(klass)
+                   if hasattr(klass,'__bases__'):
+                       for base in klass.__bases__:
+                           ret = ret + get_class_members(base)
+                   return ret
+
+               m = re.match(r'(\w+(\.\w+)*)\.(\w*)', text)
+               if m:
+                   expr, attr = m.group(1, 3)
+                   thisobject = None
+                   try:
+                       thisobject = eval(expr, globals())
+                   except Exception:
+                       pass
+
+                   if thisobject is not None:
+                       # get the content of the object, except __builtins__
+                       words = dir(thisobject)
+                       if '__builtins__' in words:
+                           words.remove('__builtins__')
+
+                       if hasattr(thisobject, '__class__'):
+                           words.append('__class__')
+                           words.extend(get_class_members(thisobject.__class__))
+                       matches = []
+                       n = len(attr)
+                       for word in words:
+                           if word[:n] == attr and hasattr(thisobject, word):
+                               val = getattr(thisobject, word)
+                               word = '%s.%s' % (expr, word)
+                               out.append(word)
+            else:
+                n = len(text)
+                for word in keyword.kwlist:
+                    if word[:n] == text:
+                        out.append(word)
+                for nspace in [__builtin__.__dict__, globals()]:
+                    for word, val in nspace.items():
+                        if word[:n] == text and word != '__builtins__':
+                            out.append(word)
+
+            if len(out) == 1:
+                out = []
+
+if out:
+    out = out + [''] * ((4 - (len(out) % 4)) % 4)
+    _out = [out[i*4:i*4+4] for i in range(len(out)) if out[i*4:i*4+4]]
+    longest = [max(map(lambda x: len(str(x)), o)) for o in zip(*_out)]
+    print '\\n'.join('  '.join(('%%-%ds' % longest[i]) % str(w) for i, w in enumerate(ws)) for ws in _out)
+""".format(cmd, splits[-1].rstrip(')')))
+        vim.command('redir END')
+        r = vim.eval('@a').strip()
+        vim.command('let @a="{}"'.format(old_a))
+
+        try:
+            r = re.sub('(?<= at )0x[0-9A-F]*(?=>$)', 'some address', r)
+        except Exception as e:
+            r = str(e)
+
+        py.last_cmd = cmd
+
+        if r:
+            py.cache = r
+            return r
+        return ''
+    else:
+        py.last_cmd = cmd
+        return py.cache
+py.last_cmd = None
+py.cache = None
+
+endglobal
+
+
+snippet > "p"
+>>> ${1: }
+`!p
+d = dir()
+snip.rv = ''
+if t[1] and t[1].strip() != 't':
+    try:
+        snip.rv = py(t[1])
+    except:
+        pass
+if not snip.rv:
+    snip.rv = '...'
+`
+$2
+$0
+endsnippet
+
