@@ -30,4 +30,8 @@ hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red
 " Hide tilde
 hi  NonText      guifg=bg
 
+" Fix autocomplete popup box
+hi Pmenu ctermfg=231 ctermbg=240 guifg=#ffffff guibg=#1f1f1f
+hi PmenuSel ctermfg=7 guibg=#363636 guifg=#ffffff
+
 "}}}
