@@ -52,6 +52,8 @@ Plugin 'nanotech/jellybeans.vim'
 " YouCompleteMe
 " Also install: build-essential cmake python-dev clang-3.4
 Plugin 'Valloric/YouCompleteMe'
+" Marks for git adds and removals
+Plugin 'airblade/vim-gitgutter'
 
 " TODO: Retest every plugin :(
 
@@ -131,3 +133,11 @@ let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
 "}}}
+
+" GitGutter settings {{{
+nnoremap <silent> ]h :GitGutterNextHunk<CR>
+nnoremap <silent> [h :GitGutterPrevHunk<CR>
+nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
+nnoremap <silent> <leader>gr :GitGutterRevertHunk<CR>
+nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
+" }}}
