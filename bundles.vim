@@ -56,6 +56,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 " Bufkill (kill buffers without closing windows)
 Plugin 'mattdbridges/bufkill.vim'
+" Adds Repeat
+Plugin 'tpope/vim-repeat'
 
 " TODO: Retest every plugin :(
 
