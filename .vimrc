@@ -160,3 +160,9 @@ nnoremap \ ,
 
 " set text wrapping toggles
 nmap <silent> <leader>w :set invwrap<cr>
+
+" Bubbles text up
+xmap <C-k> :mo'<-- <CR> gv
+" Bubbles text down
+xmap <C-j> :mo'>+ <CR> gv
+"}}}
