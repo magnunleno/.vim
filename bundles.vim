@@ -54,6 +54,8 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'Valloric/YouCompleteMe'
 " Marks for git adds and removals
 Plugin 'airblade/vim-gitgutter'
+" Bufkill (kill buffers without closing windows)
+Plugin 'mattdbridges/bufkill.vim'
 
 " TODO: Retest every plugin :(
 
@@ -140,4 +142,12 @@ nnoremap <silent> [h :GitGutterPrevHunk<CR>
 nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
 nnoremap <silent> <leader>gr :GitGutterRevertHunk<CR>
 nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
+" }}}
+"
+"
+" Bufkill mapping {{{
+" Map bufkill to CTRL Backspace 
+nnoremap <silent> <C-Backspace> :BD<CR>
+" Map bd to BD
+cnoremap bd BD
 " }}}

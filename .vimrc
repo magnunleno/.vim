@@ -162,3 +162,4 @@ nnoremap \ ,
 
 " set text wrapping toggles
 nmap <silent> <leader>w :set invwrap<cr>
+"}}}
