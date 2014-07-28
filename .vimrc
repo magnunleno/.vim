@@ -159,3 +159,6 @@ nnoremap <silent> <leader>r :set relativenumber!<CR>
 " Move , functionality to the old leader "\"
 nnoremap \ ,
 "}}}
+
+" set text wrapping toggles
+nmap <silent> <leader>w :set invwrap<cr>
