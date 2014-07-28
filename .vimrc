@@ -155,3 +155,7 @@ nnoremap <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fu
 
 " Set relative number toggle
 nnoremap <silent> <leader>r :set relativenumber!<CR>
+
+" Move , functionality to the old leader "\"
+nnoremap \ ,
+"}}}
