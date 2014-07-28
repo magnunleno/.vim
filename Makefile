@@ -15,7 +15,7 @@ install-bundles:
 	vim +BundleInstall +qall
 
 build-deps:
-	sudo aptitude install build-essential cmake python-dev clang-3.4 libclang-3.4-dev
+	sudo aptitude install build-essential cmake python-dev clang-3.4 libclang-3.4-dev wmctrl
 	cd bundle/YouCompleteMe && ./install.sh --clang-completer --system-libclang
 
 fonts:
