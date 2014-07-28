@@ -83,6 +83,8 @@ set splitbelow splitright
 set wildmode=list:longest,full
 " Disable preview window (faster navigation in completitions)
 set completeopt-=preview
+" Automatically read a file that has changed on disk
+set autoread
 
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
