@@ -148,4 +148,7 @@ vnoremap <BS> <nop>
 
 vnoremap <tab> %
 
+" Toggle full screen
+" Requires wmctrl: sudo aptitude insttall wmctrl
+nnoremap <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 "}}}
