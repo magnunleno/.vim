@@ -95,6 +95,8 @@ augroup filetypedetect
     autocmd FileType c,cpp,objc,objcpp call rainbow#load()
     autocmd BufNewFile,BufRead *.py source ~/.vim/confs/python.vim
     autocmd BufNewFile,BufRead *.rst source ~/.vim/confs/rst.vim
+    " Autodestroy fugitive buffers
+    autocmd BufReadPost fugitive://* set bufhidden=delete
 augroup END
 
 "}}}
