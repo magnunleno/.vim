@@ -152,3 +152,6 @@ vnoremap <tab> %
 " Requires wmctrl: sudo aptitude insttall wmctrl
 nnoremap <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 "}}}
+
+" Set relative number toggle
+nnoremap <silent> <leader>r :set relativenumber!<CR>
