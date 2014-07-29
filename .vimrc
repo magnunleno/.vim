@@ -127,10 +127,10 @@ nnoremap <C-Tab> :bn<CR>
 nnoremap <C-S-Tab> :bp<CR>
 " Disable HLSearch with <leader>/
 noremap <silent> <leader>/ :nohlsearch<CR>
-" Set en spell
-nnoremap <leader>en :setlocal spell spelllang=en<CR>
-" Set pt spell
-nnoremap <leader>pt :setlocal spell spelllang=pt<CR>
+" Toggle en spell
+nnoremap <leader>en :setlocal spell! spelllang=en<CR>
+" Toggle pt spell
+nnoremap <leader>pt :setlocal spell! spelllang=pt<CR>
 " Map quickfix commands (:cnext and :cNext) to ]e and [e
 nnoremap ]e :cnext<CR>
 nnoremap [e :cNext<CR>
