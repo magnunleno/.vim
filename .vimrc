@@ -85,6 +85,8 @@ set wildmode=list:longest,full
 set completeopt-=preview
 " Automatically read a file that has changed on disk
 set autoread
+" String to put at the start of lines that have been wrapped "
+let &showbreak='↪ '
 
 " Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
