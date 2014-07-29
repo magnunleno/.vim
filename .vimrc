@@ -30,7 +30,7 @@ set hlsearch incsearch smartcase
 if has("gui_running")
     "colorscheme xoria256
     colorscheme jellybeans++
-    " No toobar or Menu (someone use it?)
+    " No toolbar or Menu (someone use it?)
     set guioptions-=T
     set guioptions-=m
     " No left and right scrollbar
