@@ -1,5 +1,5 @@
 runtime colors/jellybeans.vim
-let g:colors_name = "jellybeans+"
+let g:colors_name = "jellybeans++"
 
 hi  VertSplit    guibg=#888888
 hi  StatusLine   guibg=#cccccc guifg=#000000
@@ -26,9 +26,6 @@ hi  Folded 	 guibg=#1f1f1f
 
 " Remove underline from SpellBad
 hi  SpellBad     term=reverse cterm=underline ctermbg=88 gui=undercurl guisp=Red guibg=#151515
-
-" Hide tilde
-hi  NonText      guifg=bg
 
 " Fix autocomplete popup box
 hi Pmenu ctermfg=231 ctermbg=240 guifg=#ffffff guibg=#1f1f1f
