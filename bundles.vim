@@ -47,8 +47,6 @@ Plugin 'AndrewRadev/switch.vim'
 Plugin 'scrooloose/syntastic'
 " Rainbow parenthesis
 Plugin 'oblitum/rainbow'
-" Jellybeans Theme
-Plugin 'nanotech/jellybeans.vim'
 " YouCompleteMe
 " Also install: build-essential cmake python-dev clang-3.4
 Plugin 'Valloric/YouCompleteMe'
@@ -57,6 +55,16 @@ Plugin 'airblade/vim-gitgutter'
 " Bufkill (kill buffers without closing windows)
 Plugin 'mattdbridges/bufkill.vim'
 " Adds Repeat
+" Colors
+Plugin 'tomasr/molokai'
+Plugin 'sjl/badwolf'
+Plugin 'vim-scripts/BusyBee'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'morhetz/gruvbox'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'croaker/mustang-vim'
+Plugin 'nanotech/jellybeans.vim'
+
 Plugin 'tpope/vim-repeat'
 
 " TODO: Retest every plugin :(
