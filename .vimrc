@@ -171,4 +171,7 @@ nmap <silent> <leader>w :set invwrap<cr>
 xmap <C-k> :mo'<-- <CR> gv
 " Bubbles text down
 xmap <C-j> :mo'>+ <CR> gv
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
 "}}}
