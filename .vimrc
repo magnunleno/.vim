@@ -65,6 +65,8 @@ set foldenable foldmethod=marker
 set hidden
 " More powerful backspacing
 set backspace=indent,eol,start
+" Tells VIM that we are using a fast TTY
+set ttyfast
 " Keep 200 lines of command line history
 set history=200
 " Suffixes that get lower priority when doing tab completion for filenames.
@@ -75,10 +77,14 @@ set wildignore+=*.bak,~*,*.swp,*.o,*.info,*.aux,*.log,*.dvi,*.bbl,*.blg,*.brf,*.
 set fillchars=
 " Highlight the textwidth+1 column. In python files commonly is the 80th column
 set colorcolumn=+1
+" Don't try to highlight lines longer than 800 characters.
+set synmaxcol=800
 " Disable backup and swapfile
 set nobackup noswapfile
 " Fix split positioning
 set splitbelow splitright
+" Rounds indent to multiple of shiftwidth
+set shiftround
 " Complet matching text and show list
 set wildmode=list:longest,full
 " Disable preview window (faster navigation in completitions)
