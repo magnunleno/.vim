@@ -120,9 +120,10 @@ nnoremap <silent> <C-Backspace> :BD<CR>
 " }}}
 
 " #### ZoomWin: Zooms Window in and out ################################## {{{
-Plugin 'regedarek/ZoomWin'
+"Plugin 'regedarek/ZoomWin'
+Plugin 'magnunleno/ZoomWin'
 " Mappings just like Terminator
-nnoremap <silent> <C-s-x> :ZoomWin<CR>:set modifiable<CR>
+nmap <unique> <c-s-x>  <Plug>ZoomWin
 " Makes <C-w>o behaves as expected
 nnoremap <silent> <C-w>o :only<CR>
 "}}}
