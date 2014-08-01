@@ -1,7 +1,6 @@
 " Vim filetype plugin file
 " Language:	python
-"
-let b:did_ftplugin = 1
+
 let b:delimitMate_expand_cr = 1
 let b:delimitMate_nesting_quotes = ['"',"'"]
 let g:switch_definitions = [
@@ -45,7 +44,6 @@ fun! <SID>Python_jump(motion) range
     call histdel('/', -1)
     let @/ = save    " restore last search pattern
 endfun
-
 
 nnoremap <buffer> <leader>r :w<CR>:!/usr/bin/env python3 %<CR>
 nnoremap <buffer> <leader>r2 :w<CR>:!/usr/bin/env python2 %<CR>
