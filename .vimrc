@@ -10,10 +10,10 @@
 let mapleader=","
 
 " Vundle and Plugins bootstrap/settings
-source ~/.vim/bundles.vim
+source ~/.vim/plugins.vim
 
 " Some accelerators
-let $PLUGINS='~/.vim/bundles.vim'
+let $PLUGINS='~/.vim/plugins.vim'
 let $PYTHON='~/.vim/confs/python.vim'
 let $RST='~/.vim/confs/rst.vim'
 
