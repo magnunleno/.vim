@@ -9,8 +9,24 @@
 " I don't like \ as a leader.
 let mapleader=","
 
-" Vundle and Plugins bootstrap/settings
+" #### Vundle & Plugins ################################################### {{{
+" Pre-requisites
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
+
+" Set vundle default protocol
+let g:vundle_default_git_proto = 'http'
+
+" Load plugins
 source ~/.vim/plugins.vim
+
+" Closing
+call vundle#end()
+filetype plugin indent on
+" }}}
 
 " Some accelerators
 let $PLUGINS='~/.vim/plugins.vim'

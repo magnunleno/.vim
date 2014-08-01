@@ -1,19 +1,3 @@
-" Vundle Header {{{
-set nocompatible " No VI compatibility
-filetype off
-
-"Add Vundle to path
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-Plugin 'gmarik/vundle'
-
-" Set vundle default protocol
-let g:vundle_default_git_proto = 'http'
-"}}}
-
-" ############################ Bundles & Settings ######################## {{{
 " #### Airline: A nice and light status line ############################# {{{
 Plugin 'bling/vim-airline'
 
@@ -142,9 +126,8 @@ nnoremap <silent> <C-s-x> :ZoomWin<CR>:set modifiable<CR>
 " Makes <C-w>o behaves as expected
 nnoremap <silent> <C-w>o :only<CR>
 "}}}
-" }}}
 
-" ################################ Colors ################################ {{{
+" #### Colors ############################################################ {{{
 Plugin 'tomasr/molokai'
 Plugin 'sjl/badwolf'
 Plugin 'vim-scripts/BusyBee'
@@ -153,9 +136,4 @@ Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'croaker/mustang-vim'
 Plugin 'nanotech/jellybeans.vim'
-"}}}
-
-" ############################## Vundle closing ########################## {{{
-call vundle#end()
-filetype plugin indent on
 "}}}
