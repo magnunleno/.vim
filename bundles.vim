@@ -56,6 +56,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mattdbridges/bufkill.vim'
 " Repeats motions from surround and others
 Plugin 'tpope/vim-repeat'
+" Adds a zoomplugin
+Plugin 'regedarek/ZoomWin'
 
 " Colors {{{
 Plugin 'tomasr/molokai'
@@ -161,3 +163,9 @@ nnoremap <silent> <C-Backspace> :BD<CR>
 " Map bd to BD
 cnoremap bd BD
 " }}}
+
+" ZoomWin Settings {{{
+nnoremap <silent> <C-s-x> :ZoomWin<CR>:set modifiable<CR>
+" Makes <C-w>o behaves as expected
+nnoremap <silent> <C-w>o :only<CR>
+"}}}
