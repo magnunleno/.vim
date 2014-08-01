@@ -54,8 +54,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 " Bufkill (kill buffers without closing windows)
 Plugin 'mattdbridges/bufkill.vim'
-" Adds Repeat
-" Colors
+" Repeats motions from surround and others
+Plugin 'tpope/vim-repeat'
+
+" Colors {{{
 Plugin 'tomasr/molokai'
 Plugin 'sjl/badwolf'
 Plugin 'vim-scripts/BusyBee'
@@ -64,8 +66,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'croaker/mustang-vim'
 Plugin 'nanotech/jellybeans.vim'
-
-Plugin 'tpope/vim-repeat'
+"}}}
 
 " TODO: Retest every plugin :(
 
@@ -155,7 +156,7 @@ nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
 "
 "
 " Bufkill mapping {{{
-" Map bufkill to CTRL Backspace 
+" Map bufkill to CTRL Backspace
 nnoremap <silent> <C-Backspace> :BD<CR>
 " Map bd to BD
 cnoremap bd BD
