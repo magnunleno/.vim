@@ -1,6 +1,16 @@
+VIMBKP=~/.vimbkp-$(shell date +"%Y-%m-%d")
+
 clean:
 	echo "Cleaning"
 	rm -rf bundle/*
+
+backup:
+	echo "Making backup at: $(VIMBKP)"
+	mkdir $(VIMBKP)
+	mv ~/.vim $(VIMBKP)/
+	mv ~/.vimrc $(VIMBKP)/
+	-mv ~/.viminfo $(VIMBKP)/
+	-mv ~/.vimtags $(VIMBKP)/
 
 deploy: link install-vundle install-bundles build-deps fonts
 
