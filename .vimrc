@@ -45,7 +45,7 @@ set hlsearch incsearch smartcase
 " Hum... Nice clothes
 if has("gui_running")
     "colorscheme jellybeans++ " Sorry, Steve Losh rocks
-    colorscheme badwolf
+    colorscheme badwolf+
     " No toolbar or Menu (someone use it?)
     set guioptions-=T
     set guioptions-=m
