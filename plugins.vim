@@ -52,7 +52,7 @@ vmap s S
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 let g:UltiSnipsEditSplit="vertical"
-nnoremap <silent> <leader>S :UltiSnipsEdit<CR>
+nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
 " }}}
 
 " #### Signature: Visual marks and some nice mappings #################### {{{
