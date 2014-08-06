@@ -102,7 +102,7 @@ set splitbelow splitright
 " Rounds indent to multiple of shiftwidth
 set shiftround
 " Complet matching text and show list
-set wildmode=list:longest,full
+set wildmode=list:longest
 " Disable preview window (faster navigation in completitions)
 set completeopt-=preview
 " Automatically read a file that has changed on disk
