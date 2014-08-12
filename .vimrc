@@ -168,6 +168,8 @@ inoremap <right> <nop>
 
 " Save file (yeah, I'm lazy)
 inoremap <C-s> <esc>:w<cr>a
+noremap  <F1> <nop>
+inoremap <F1> <nop>
 
 """""""""" Visual Key Maps
 " Disable the del and backspace (maybe I'll give them an usage in the future)
