@@ -33,6 +33,6 @@ $ mv ~/.vimtags $VIMBKP/
 After that, simply clone this repository and run `make deploy`:
 
 ```bash
-$ git clone http://github.com/magnunleno/.vim ~/.vim
+$ git clone https://github.com/magnunleno/.vim.git ~/.vim
 $ cd ~/.vim && make deploy
 ```
