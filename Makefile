@@ -19,7 +19,7 @@ link:
 
 install-vundle:
 	-mkdir bundle
-	-cd bundle && git clone http://github.com/gmarik/Vundle.vim.git Vundle.vim
+	-cd bundle && git clone https://github.com/gmarik/Vundle.vim.git Vundle.vim
 
 install-bundles:
 	vim +BundleInstall +qall
