@@ -30,15 +30,15 @@ let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
 "}}}
 
 " #### Fugitive: GIT Integration ######################################### {{{
-Plugin 'fugitive.vim'
+Plug 'fugitive.vim'
 " }}}
 
 " #### Dispatch: Asynchronous calls ###################################### {{{
-Plugin 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 " }}}
 
 " #### SmoothScroll: Smooth scrolling #################################### {{{
-Plugin 'terryma/vim-smooth-scroll'
+Plug 'terryma/vim-smooth-scroll'
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
@@ -58,31 +58,31 @@ nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
 " }}}
 
 " #### Signature: Visual marks and some nice mappings #################### {{{
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 " }}}
 
 " #### delimitMate: Automatically adds delimits ########################## {{{
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 let b:delimitMate_expand_cr=1
 let b:delimitMate_expand_space=1
 let b:delimitMate_expand_inside_quotes=1
 " }}}
 
 " #### list-text-object: Creates Argument object ######################### {{{
-Plugin 'jesseschalken/list-text-object'
+Plug 'jesseschalken/list-text-object'
 " }}}
 
 " #### CtrlP: Fuzzy finder ############################################### {{{
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " }}}
 
 " #### Switch: Cycles throught predefined keywords/matches ############### {{{
-Plugin 'AndrewRadev/switch.vim'
+Plug 'AndrewRadev/switch.vim'
 nnoremap <silent> <leader>s :Switch<CR>
 " }}}
 
 " #### Syntastic: Syntatic checker ####################################### {{{
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_check_on_open = 1
@@ -90,11 +90,11 @@ let g:syntastic_loc_list_height = 3
 " }}}
 
 " #### Rainbow: Rainbow parenthesis ###################################### {{{
-Plugin 'oblitum/rainbow'
+Plug 'oblitum/rainbow'
 " }}}
 
 " #### YouCompleteMe: Autocomplete based in tags, cmake and etc ########## {{{
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 nnoremap <silent> <C-]> :YcmCompleter GoTo<CR>
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
@@ -103,7 +103,7 @@ let g:ycm_add_preview_to_completeopt=0
 " }}}
 
 " #### GitGutter: Marks for git adds and removals ######################## {{{
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 nnoremap <silent> ]h :GitGutterNextHunk<CR>
 nnoremap <silent> [h :GitGutterPrevHunk<CR>
 nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
@@ -112,18 +112,18 @@ nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
 " }}}
 
 " #### Repeat: Repeats motions from surround and others ################## {{{
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 " }}}
 
 " #### Bufkill: kill buffers without closing windows ##################### {{{
-Plugin 'mattdbridges/bufkill.vim'
+Plug 'mattdbridges/bufkill.vim'
 " Map bufkill to CTRL Backspace
 nnoremap <silent> <C-Backspace> :BD<CR>
 " }}}
 
 " #### ZoomWin: Zooms Window in and out ################################## {{{
 "Plugin 'regedarek/ZoomWin'
-Plugin 'magnunleno/ZoomWin'
+Plug 'magnunleno/ZoomWin'
 " Mappings just like Terminator
 nmap <unique> <c-s-x>  <Plug>ZoomWin
 " Makes <C-w>o behaves as expected
@@ -131,12 +131,12 @@ nnoremap <silent> <C-w>o :only<CR>
 "}}}
 
 " #### Colors ############################################################ {{{
-Plugin 'tomasr/molokai'
-Plugin 'sjl/badwolf'
-Plugin 'vim-scripts/BusyBee'
-Plugin '29decibel/codeschool-vim-theme'
-Plugin 'morhetz/gruvbox'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'croaker/mustang-vim'
-Plugin 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+Plug 'vim-scripts/BusyBee'
+Plug '29decibel/codeschool-vim-theme'
+Plug 'morhetz/gruvbox'
+Plug 'w0ng/vim-hybrid'
+Plug 'croaker/mustang-vim'
+Plug 'nanotech/jellybeans.vim'
 "}}}
