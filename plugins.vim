@@ -1,5 +1,7 @@
+call plug#begin('~/.vim/plugged')
+
 " #### Airline: A nice and light status line ############################# {{{
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 function! Myffenc()
   return printf('%s%s', &ff, strlen(&fenc) > 0 ? ' ['.&fenc.']' : '')
@@ -44,13 +46,13 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 " }}}
 
 " #### Surround: Surrounding tags ######################################## {{{
-Plugin 'surround.vim'
+Plug 'tpope/vim-surround'
 vmap s S
 " }}}
-
-" #### Snippets: Ultisnipst + vim-snippets ############################### {{{
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+"
+" #### Snippets: Ultisnips + vim-snippets ############################### {{{
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 let g:UltiSnipsEditSplit="vertical"
 nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
 " }}}
