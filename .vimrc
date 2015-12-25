@@ -17,6 +17,10 @@ let $PLUGINS='~/.vim/plugins.vim'
 let $PYTHON='~/.vim/confs/python.vim'
 let $RST='~/.vim/confs/rst.vim'
 
+" Mappings
+source ~/.vim/mappings.vim
+let $MAPPINGS='~/.vim/mappings.vim'
+
 set nocompatible
 filetype plugin indent on
 
@@ -110,79 +114,3 @@ augroup filetypedetect
     autocmd BufReadPost fugitive://* set bufhidden=delete
 augroup END
 
-"}}}
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  Key Maps
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"{{{
-
-"""""""""" Normal Key Maps
-" Disable arrow keys. Yeah, that's right baby, no need for them!
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-" Disable the del and backspace (maybe I'll give them an usage in the future)
-nnoremap <Del> <nop>
-nnoremap <BS> <nop>
-
-" Save file (yeah, I'm lazy)
-nnoremap <C-s> :w<cr>
-" Switch between last and actual buffer
-nnoremap <C-p> :b#<CR>
-" Next buffer
-nnoremap <C-Tab> :bn<CR>
-" Previews buffer
-nnoremap <C-S-Tab> :bp<CR>
-" Disable HLSearch with <leader>/
-noremap <silent> <leader>/ :nohlsearch<CR>
-" Toggle en spell
-nnoremap <leader>en :setlocal spell! spelllang=en<CR>
-" Toggle pt spell
-nnoremap <leader>pt :setlocal spell! spelllang=pt<CR>
-" Map quickfix commands (:cnext and :cNext) to ]e and [e
-nnoremap ]e :cnext<CR>
-nnoremap [e :cNext<CR>
-" C-Enter goes into a tag (for info ':help tag')
-noremap <silent> <C-Enter> <C-]>
-
-"""""""""" Insert Key Maps
-" Disable arrow keys. Yeah, that's right baby, no need for them!
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" Save file (yeah, I'm lazy)
-inoremap <C-s> <esc>:w<cr>a
-noremap  <F1> <nop>
-inoremap <F1> <nop>
-
-"""""""""" Visual Key Maps
-" Disable the del and backspace (maybe I'll give them an usage in the future)
-vnoremap <Del> <nop>
-vnoremap <BS> <nop>
-
-vnoremap <tab> %
-
-" Toggle full screen
-" Requires wmctrl: sudo aptitude insttall wmctrl
-nnoremap <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
-
-" Set relative number toggle
-nnoremap <silent> <leader>r :set relativenumber!<CR>
-
-" Move , functionality to the old leader "\"
-nnoremap \ ,
-
-" set text wrapping toggles
-nmap <silent> <leader>w :set invwrap<cr>
-
-" Bubbles text up
-xmap <C-k> :mo'<-- <CR> gv
-" Bubbles text down
-xmap <C-j> :mo'>+ <CR> gv
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
-"}}}
