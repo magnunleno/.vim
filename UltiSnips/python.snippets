@@ -12,8 +12,8 @@ $0
 endsnippet
 
 ## Functions
-snippet defv "function with VISUAL" b
-def ${1:function}(${2:args})
+snippet def "function with VISUAL" b
+def ${1:function}(${2:args}):
 	${VISUAL}${0}
 endsnippet
 
@@ -127,4 +127,13 @@ else:
 	${6:pass}
 finally:
 	${7:pass}
+endsnippet
+
+snippet forlc "for in list comprehension" w
+[${1} for ${2:i} in ${3}]
+endsnippet
+
+snippet main "Main with VISUAL support" b
+if __name__ == '__main__':
+    ${VISUAL}${1}
 endsnippet
