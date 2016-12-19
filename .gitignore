@@ -39,3 +39,6 @@ bundle
 spell
 
 .netrwhist
+
+plugins/
+docs/
