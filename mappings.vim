@@ -134,6 +134,13 @@ endif
 
 " Search All TODO comments in .py files
 noremap <Leader>t :noautocmd vimgrep /TODO/j **/*.py<CR>:cw<CR>
+
+" Makes <C-w>o behaves as expected
+nnoremap <silent> <C-w>o :only<CR>
+
+" Move between ALE errors
+nmap <silent> <leader>lp <Plug>(ale_previous_wrap)
+nmap <silent> <leader>ln <Plug>(ale_next_wrap)
 " ######################################################################## }}}
 
 " #### C Mappings ######################################################## {{{
