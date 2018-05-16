@@ -193,6 +193,19 @@ if has('nvim')
 endif
 "}}}
 
+" ### Jinja Syntax ####################################################### {{{
+Plug 'Glench/Vim-Jinja2-Syntax'
+" }}}
+
+" ### Python PEP8 Indent ################################################# {{{
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+" }}}
+
+" ### Python Syntax ###################################################### {{{
+Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
+let python_highlight_all=1
+" }}}
+
 " #### Colors ############################################################ {{{
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
