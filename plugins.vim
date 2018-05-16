@@ -1,16 +1,28 @@
 call plug#begin('~/.vim-plugins')
-"
-" #### JavaScript Syntax ################################################ {{{
+
+" #### Languages Syntax & Fixers ######################################## {{{
+" JS
 Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'vue,jquery,underscore'
-" }}}
 
-" #### VIM Vue.js: Syntax ############################################### {{{
+" Vue.js
 Plug 'posva/vim-vue'
+
+" Python
+Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+let python_highlight_all=1
+Plug 'fisadev/vim-isort', {'for': ['python']}
+let g:vim_isort_python_version = 'python3'
+
+" Jinja
+Plug 'Glench/Vim-Jinja2-Syntax'
+
 " }}}
 
-" #### Airline: A nice and light status line ############################# {{{
+" #### Visual Helpers ################################################### {{{
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -20,9 +32,7 @@ endfunction
 
 let g:airline_powerline_fonts = 0
 let g:airline_symbols = {}
-let g:airline_mode_map = {'__' : '-', 'n'  : 'N', 'i'  : 'I', 'R'  : 'R',
-    \ 'c'  : 'C', 'v'  : 'V', 'V'  : 'V', '' : 'V', 's'  : 'S', 'S'  : 'S',
-    \ '' : 'S', }
+let g:airline_mode_map = {'__' : '-', 'n'  : 'N', 'i'  : 'I', 'R'  : 'R', 'c'  : 'C', 'v'  : 'V', 'V'  : 'V', '' : 'V', 's'  : 'S', 'S'  : 'S', '' : 'S', }
 let g:airline_theme='gruvbox'
 let g:airline_section_z = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold# %l%#__restore__#:%c"
 let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
@@ -30,6 +40,54 @@ let g:airline#extensions#tagbar#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
+
+" Signature: Visual Marks ans some mappings
+Plug 'kshenoy/vim-signature'
+
+" Rainbow: Colorize parentheses
+Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'javascript', 'vue']}
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\    'guifgs': ['#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e'],
+\    'ctermfgs': [ 'brown', 'blue', 'gray', 'green', 'cyan', 'red', 'magenta', 'brown', 'gray', 'black', 'magenta', 'blue', 'green', 'cyan', 'red'],
+\    'operators': '_,_',
+\    'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\    'separately': {
+\        '*': {},
+\        'tex': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\        },
+\        'javascript': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'],
+\        },
+\        'vim': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\        },
+\        'jinja': {
+\            'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\        },
+\        'css': 0,
+\    }
+\}
+
+" GitGutter: Marks for git adds and removals
+Plug 'airblade/vim-gitgutter'
+nnoremap <silent> ]h :GitGutterNextHunk<CR>
+nnoremap <silent> [h :GitGutterPrevHunk<CR>
+nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
+nnoremap <silent> <leader>gr :GitGutterRevertHunk<CR>
+nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
+
+" Colorizer: Highlight RGB colors
+Plug 'lilydjwg/colorizer'
+let g:colorizer_nomap=1
+
+" IndentLine: Adds marks for indentation
+Plug 'Yggdroot/indentLine', {'for': ['python', 'c', 'java', 'html', 'jinja', 'javascript', 'vue']}
+let g:indentLine_char = '¦'
+let g:indentLine_color_term = '236'
+let g:indentLine_color_gui = '#363636'
+let g:indentLine_noConcealCursor=1
 "}}}
 
 " #### Snippets: Ultisnips + vim-snippets ############################### {{{
@@ -43,10 +101,6 @@ let g:airline#extensions#syntastic#enabled = 1
 " #### Surround: Surrounding tags ######################################## {{{
 Plug 'tpope/vim-surround'
 vmap s S
-" }}}
-
-" #### Signature: Visual marks and some nice mappings #################### {{{
-Plug 'kshenoy/vim-signature'
 " }}}
 
 " #### AutoPairs: Automatically adds pairs ############################### {{{
@@ -92,11 +146,6 @@ let g:ale_linter_aliases = {'vue': 'javascript'}
 let g:ale_linters.vue = ['eslint', 'prettier']
 " }}}
 
-" #### VIM-isort: Sort Imports fo Python ################################ {{{
-Plug 'fisadev/vim-isort', {'for': ['python']}
-let g:vim_isort_python_version = 'python3'
-" }}}
-
 " #### VIM-Test: Test suite runner ####################################### {{{
 Plug 'janko-m/vim-test'
 Plug 'reinh/vim-makegreen'
@@ -115,33 +164,6 @@ nmap <silent> <leader>vtf :TestFile -vv<CR>
 nmap <silent> <leader>vts :TestSuite -vv<CR>
 nmap <silent> <leader>vtl :TestLast -vv<CR>
 nmap <silent> <leader>vtv :TestVisit -vv<CR>
-" }}}
-
-" #### Rainbow: Rainbow parenthesis ###################################### {{{
-Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'javascript', 'vue']}
-let g:rainbow_active = 1
-let g:rainbow_conf = {
-\    'guifgs': ['#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e'],
-\    'ctermfgs': [ 'brown', 'blue', 'gray', 'green', 'cyan', 'red', 'magenta', 'brown', 'gray', 'black', 'magenta', 'blue', 'green', 'cyan', 'red'],
-\    'operators': '_,_',
-\    'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\    'separately': {
-\        '*': {},
-\        'tex': {
-\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\        },
-\        'javascript': {
-\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'],
-\        },
-\        'vim': {
-\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\        },
-\        'jinja': {
-\            'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\        },
-\        'css': 0,
-\    }
-\}
 " }}}
 
 " #### Jedi-VIM: Not for autocompletion! ########################### {{{
@@ -178,15 +200,6 @@ smap <c-space>     <Plug>(neosnippet_expand_or_jump)
 xmap <c-space>     <Plug>(neosnippet_expand_target)
 " }}}
 
-" #### GitGutter: Marks for git adds and removals ######################## {{{
-Plug 'airblade/vim-gitgutter'
-nnoremap <silent> ]h :GitGutterNextHunk<CR>
-nnoremap <silent> [h :GitGutterPrevHunk<CR>
-nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
-nnoremap <silent> <leader>gr :GitGutterRevertHunk<CR>
-nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
-" }}}
-
 " #### Repeat: Repeats motions from surround and others ################## {{{
 Plug 'tpope/vim-repeat'
 " }}}
@@ -206,32 +219,6 @@ if has('nvim')
     let g:zoomwin_localoptlist = ["ai","ar","bh","bin","bl","bomb","bt","cfu","ci","cin","cink","cino","cinw","cms","com","cpt","diff","efm","eol","ep","et","fenc","fex","ff","flp","fo","ft","gp","imi","ims","inde","inex","indk","inf","isk","kmp","lisp","mps","ml","ma","mod","nf","ofu","pi","qe","ro","sw","si","sts","spc","spf","spl","sua","swf","smc","syn","ts","tw","udf","wfh","wfw","wm"]
 endif
 "}}}
-
-" ### Jinja Syntax ####################################################### {{{
-Plug 'Glench/Vim-Jinja2-Syntax'
-" }}}
-
-" ### Python PEP8 Indent ################################################# {{{
-Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
-" }}}
-
-" ### Python Syntax ###################################################### {{{
-Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
-let python_highlight_all=1
-" }}}
-
-" ### Colorizer: Highlight RGB colors #################################### {{{
-Plug 'lilydjwg/colorizer'
-let g:colorizer_nomap=1
-" }}}
-
-" ### IndentLine ######################################################### {{{
-Plug 'Yggdroot/indentLine', {'for': ['python', 'c', 'java', 'html', 'jinja', 'javascript', 'vue']}
-let g:indentLine_char = '¦'
-let g:indentLine_color_term = '236'
-let g:indentLine_color_gui = '#363636'
-let g:indentLine_noConcealCursor=1
-" }}}
 
 " ### Commentary: Makes comments easy peasy ############################## {{{
 Plug 'tpope/vim-commentary'
