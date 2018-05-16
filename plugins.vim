@@ -52,12 +52,25 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<': '>
 " let b:delimitMate_expand_inside_quotes=1
 "}}}
 
-" #### list-text-object: Creates Argument object ######################### {{{
-Plug 'jesseschalken/list-text-object'
+" #### CtrlP: Fuzzy finder ############################################### {{{
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
+  \ 'file': '\v\.(pyc)$',
+  \ }
 " }}}
 
-" #### CtrlP: Fuzzy finder ############################################### {{{
-Plug 'kien/ctrlp.vim'
+" #### A.L.E: Syntatic alternative ####################################### {{{
+Plug 'w0rp/ale'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '➧'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+highlight link ALEErrorSign WarningMsg
+highlight link ALEWarningSign ModeMsg
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
 " }}}
 
 " #### Switch: Cycles throught predefined keywords/matches ############### {{{
