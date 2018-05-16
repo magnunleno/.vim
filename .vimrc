@@ -22,32 +22,39 @@ let $MAPPINGS='~/.vim/mappings.vim'
 set nocompatible
 filetype plugin indent on
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              General Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"{{{
 " Enable Syntax highlight
 syntax on
 " Make vim searching incredible
 set hlsearch incsearch smartcase
+" Set VIM to use 256 colors
+set t_Co=256
 
-" Hum... Nice clothes
+set background=dark
+
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_improved_warnings=1
+let g:gruvbox_invert_indent_guides=1
+
+let g:gruvbox_vert_split='dark0_hard'
+let g:gruvbox_sign_column='dark0_hard'
+let g:gruvbox_color_column='dark0'
+
+let g:gruvbox_invert_selection=0
+colorscheme gruvbox
+
 if has("gui_running")
-    "colorscheme jellybeans++ " Sorry, Steve Losh rocks
-    colorscheme badwolf+
     " No toolbar or Menu (someone use it?)
     set guioptions-=T
     set guioptions-=m
     " No left and right scrollbar
     set guioptions-=r
     set guioptions-=L
-    " I'm currently testing this font...
-    set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
-else
-    colorscheme desert
+    set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
 endif
 
 
+" Set dark background
 " Shows line numbers
 set number
 " Always shows the ruler (cursor position and etc)
