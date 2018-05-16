@@ -147,6 +147,7 @@ let g:rainbow_conf = {
 " #### Jedi-VIM: Not for autocompletion! ########################### {{{
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
 let g:jedi#completions_enabled = 0
+let g:jedi#show_call_signatures = 2
 " }}}
 
 " #### Deoplete: Autocompelte for NeoVIM ########################### {{{
