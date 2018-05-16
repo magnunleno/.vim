@@ -72,7 +72,7 @@ set nowrap linebreak
 " Always shows the status line
 set laststatus=2
 " Eable folding and set it to use the marker
-set foldenable foldmethod=marker
+set foldenable foldmethod=indent
 " Set hidden buffers
 set hidden
 " More powerful backspacing
