@@ -125,13 +125,6 @@ set ttimeoutlen=10
 
 " Settigns for specific filetype
 augroup filetypedetect
-    " Basic settings for C
-    autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
-    autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
-    autocmd BufNewFile,BufRead *.jinja setlocal omnifunc=htmlcomplete#CompleteTags
-    " Autodestroy fugitive buffers
-    autocmd BufReadPost fugitive://* set bufhidden=delete
-    autocmd FileType rst setlocal iskeyword=@,48-57,_,192-255
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
