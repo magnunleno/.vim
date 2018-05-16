@@ -1,0 +1,16 @@
+snippet     promise
+abbr        new Promise() => ...
+options     word
+  new Promise((resolve, reject) => {
+        ${0:// CODE}
+  })
+
+snippet     .then
+abbr        .then(data => ...)
+options     word
+  .then(data => ${0})
+
+snippet     .catch
+abbr        .catch(err => { reject(err) })
+options     word
+  .catch(err => { reject(err) })
