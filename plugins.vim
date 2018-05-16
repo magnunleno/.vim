@@ -175,9 +175,9 @@ Plug 'tpope/vim-repeat'
 " }}}
 
 " #### Bufkill: kill buffers without closing windows ##################### {{{
-Plug 'mattdbridges/bufkill.vim'
+Plug 'http://github.com/vim-scripts/bufkill.vim'
 " Map bufkill to CTRL Backspace
-nnoremap <silent> <C-Backspace> :BD<CR>
+nnoremap <silent> <leader><Backspace> :BD<CR>
 " }}}
 
 " #### ZoomWin: Zooms Window in and out ################################## {{{

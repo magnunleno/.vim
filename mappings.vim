@@ -20,8 +20,6 @@ else
     nnoremap <leader>[ :tabprevious<CR>
     " Next Tab
     nnoremap <leader>] :tabnext<CR>
-    " Close buffer without destroying window
-    nnoremap <leader> :BD<CR>
 "}}}
 endif
 
