@@ -22,20 +22,12 @@ let g:airline_section_z = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold# %l%
 let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
 "}}}
 
-" #### Fugitive: GIT Integration ######################################### {{{
-Plug 'fugitive.vim'
-" }}}
-
-" #### Dispatch: Asynchronous calls ###################################### {{{
-Plug 'tpope/vim-dispatch'
-" }}}
-
-" #### SmoothScroll: Smooth scrolling #################################### {{{
-Plug 'terryma/vim-smooth-scroll'
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" #### Snippets: Ultisnips + vim-snippets ############################### {{{
+" let g:UltiSnipsUsePythonVersion = 2
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" let g:UltiSnipsEditSplit="vertical"
+" nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
 " }}}
 
 " #### Surround: Surrounding tags ######################################## {{{
