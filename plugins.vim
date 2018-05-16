@@ -72,9 +72,18 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 highlight link ALEErrorSign WarningMsg
 highlight link ALEWarningSign ModeMsg
+" Sets ALE to use only flake8 and eslint (not jshintj)
 let g:ale_linters = {
 \   'python': ['flake8'],
+\   'javascript': ['eslint', 'prettier'],
+\   'js': ['eslint', 'prettier'],
 \}
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'python': ['isort'],
+\}
+let g:ale_linter_aliases = {'vue': 'javascript'}
+let g:ale_linters.vue = ['eslint', 'prettier']
 " }}}
 
 " #### VIM-isort: Sort Imports fo Python ################################ {{{
