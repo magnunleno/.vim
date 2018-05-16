@@ -103,11 +103,17 @@ set wildmode=list:longest
 set completeopt=longest,menuone
 " Automatically read a file that has changed on disk
 set autoread
-" String to put at the start of lines that have been wrapped "
-let &showbreak='↪ '
-
-" Read again about this Settigns...
 " set list listchars=tab:▸,trail:·,nbsp:·,
+set list listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:⌴
+" Remove appending of comment when press o or O
+set formatoptions-=o
+" Adds numbered lists formatting
+set formatoptions+=n
+" Don't break a line after a one-letter word
+set formatoptions+=1
+" Remove a comment leader when joining lines
+set formatoptions+=j
+
 
 " Settigns for specific filetype
 augroup filetypedetect
