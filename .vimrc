@@ -120,6 +120,9 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
+" Resize splits when the window is resized
+" au VimResized * :wincmd =
+
 " Settigns for specific filetype
 augroup filetypedetect
     autocmd BufNewFile,BufRead *.c,*.h setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent nowrap
