@@ -93,8 +93,8 @@ let g:vim_isort_python_version = 'python3'
 
 " #### VIM-Test: Test suite runner ####################################### {{{
 Plug 'janko-m/vim-test'
-
-let test#strategy = 'basic'
+Plug 'reinh/vim-makegreen'
+let test#strategy = 'makegreen'
 let test#python#runner = 'pytest'
 let test#python#pytest#executable = 'pytest'
 
@@ -194,12 +194,9 @@ nnoremap <silent> <leader><Backspace> :BD<CR>
 " }}}
 
 " #### ZoomWin: Zooms Window in and out ################################## {{{
-"Plugin 'regedarek/ZoomWin'
-Plug 'magnunleno/ZoomWin'
+Plug 'regedarek/ZoomWin'
 " Mappings just like Terminator
 nmap <unique> <leader>z  <Plug>ZoomWin
-" Makes <C-w>o behaves as expected
-nnoremap <silent> <C-w>o :only<CR>
 if has('nvim')
     " removed 'key', 'oft', 'sn', 'tx' options which do not work with nvim
     let g:zoomwin_localoptlist = ["ai","ar","bh","bin","bl","bomb","bt","cfu","ci","cin","cink","cino","cinw","cms","com","cpt","diff","efm","eol","ep","et","fenc","fex","ff","flp","fo","ft","gp","imi","ims","inde","inex","indk","inf","isk","kmp","lisp","mps","ml","ma","mod","nf","ofu","pi","qe","ro","sw","si","sts","spc","spf","spl","sua","swf","smc","syn","ts","tw","udf","wfh","wfw","wm"]
