@@ -135,3 +135,12 @@ augroup filetypedetect
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" Make sure Vim returns to the same line when you reopen a file.
+" Thanks, Steve Losh
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
