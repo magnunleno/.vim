@@ -73,9 +73,9 @@ let g:ale_linters = {
 \}
 " }}}
 
-" #### Switch: Cycles throught predefined keywords/matches ############### {{{
-Plug 'AndrewRadev/switch.vim'
-nnoremap <silent> <leader>s :Switch<CR>
+" #### VIM-Test: Test suite runner ####################################### {{{
+Plug 'fisadev/vim-isort'
+let g:vim_isort_python_version = 'python3'
 " }}}
 
 " #### Syntastic: Syntatic checker ####################################### {{{
