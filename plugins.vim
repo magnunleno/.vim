@@ -34,17 +34,16 @@ let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
 Plug 'tpope/vim-surround'
 vmap s S
 " }}}
-"
-" #### Snippets: Ultisnips + vim-snippets ############################### {{{
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-let g:UltiSnipsEditSplit="vertical"
-nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
-" }}}
 
 " #### Signature: Visual marks and some nice mappings #################### {{{
 Plug 'kshenoy/vim-signature'
 " }}}
+
+" #### AutoPairs: Automatically adds pairs ############################### {{{
+Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsFlyMode = 1
+let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<': '>'}
+"}}}
 
 " #### DelimitMate: Automatically adds pairs ################################## {{{
 "Plug 'Raimondi/delimitMate'
