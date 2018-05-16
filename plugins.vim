@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim-plugins')
 
 " #### Airline: A nice and light status line ############################# {{{
 Plug 'bling/vim-airline'
