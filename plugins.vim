@@ -128,6 +128,39 @@ let g:rainbow_conf = {
 \}
 " }}}
 
+" #### Jedi-VIM: Not for autocompletion! ########################### {{{
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
+let g:jedi#completions_enabled = 0
+" }}}
+
+" #### Deoplete: Autocompelte for NeoVIM ########################### {{{
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/context_filetype.vim'
+Plug 'zchee/deoplete-jedi', {'for': 'python'}
+let g:deoplete#enable_at_startup = 1
+
+" Cicle through mappings with <tab>
+let g:deoplete#sources#jedi#enable_cache = 1
+let g:deoplete#sources#jedi#show_docstring = 1
+
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.jinja = ['<', '<[^>]*\s[[:alnum:]-]*']
+
+inoremap <expr><C-j> pumvisible() ?   "\<C-n>" : "\<C-j>"
+inoremap <expr><C-k> pumvisible() ?   "\<C-p>" : "\<C-k>"
+
+" #### NeoSnippet: Yet Another Snippets plugin ########################## {{{
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+let g:neosnippet#enable_completed_snippet = 1
+imap <c-space>     <Plug>(neosnippet_expand_or_jump)
+smap <c-space>     <Plug>(neosnippet_expand_or_jump)
+xmap <c-space>     <Plug>(neosnippet_expand_target)
+" }}}
+
 " #### GitGutter: Marks for git adds and removals ######################## {{{
 Plug 'airblade/vim-gitgutter'
 nnoremap <silent> ]h :GitGutterNextHunk<CR>
