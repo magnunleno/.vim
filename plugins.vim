@@ -222,7 +222,7 @@ let g:colorizer_nomap=1
 " }}}
 
 " ### IndentLine ######################################################### {{{
-Plug 'Yggdroot/indentLine', {'for': ['python', 'c', 'java', 'html', 'jinja']}
+Plug 'Yggdroot/indentLine', {'for': ['python', 'c', 'java', 'html', 'jinja', 'javascript', 'vue']}
 let g:indentLine_char = '¦'
 let g:indentLine_color_term = '236'
 let g:indentLine_color_gui = '#363636'
