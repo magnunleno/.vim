@@ -99,16 +99,33 @@ nmap <silent> <leader>vtv :TestVisit -vv<CR>
 " }}}
 
 " #### Rainbow: Rainbow parenthesis ###################################### {{{
-Plug 'oblitum/rainbow'
-" }}}
-
-" #### YouCompleteMe: Autocomplete based in tags, cmake and etc ########## {{{
-Plug 'Valloric/YouCompleteMe'
-nnoremap <silent> <C-]> :YcmCompleter GoTo<CR>
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-let g:ycm_add_preview_to_completeopt=0
-" Dependencies: build-essential cmake python-dev clang-3.4
+Plug 'luochen1990/rainbow', {'for': ['c', 'python', 'java', 'vim', 'bash', 'javascript', 'vue']}
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+\    'guifgs': ['#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e', '#458588', '#b16286', '#cc241d', '#d65d0e'],
+\    'ctermfgs': [ 'brown', 'blue', 'gray', 'green', 'cyan', 'red', 'magenta', 'brown', 'gray', 'black', 'magenta', 'blue', 'green', 'cyan', 'red'],
+\    'operators': '_,_',
+\    'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\    'separately': {
+\        '*': {},
+\        'tex': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\        },
+\        'javascript': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\        },
+\        'lisp': {
+\            'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\        },
+\        'vim': {
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\        },
+\        'jinja': {
+\            'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\        },
+\        'css': 0,
+\    }
+\}
 " }}}
 
 " #### GitGutter: Marks for git adds and removals ######################## {{{
