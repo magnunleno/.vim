@@ -211,6 +211,23 @@ Plug 'lilydjwg/colorizer'
 let g:colorizer_nomap=1
 " }}}
 
+" ### IndentLine ######################################################### {{{
+Plug 'Yggdroot/indentLine', {'for': ['python', 'c', 'java', 'html', 'jinja']}
+let g:indentLine_char = '¦'
+let g:indentLine_color_term = '236'
+let g:indentLine_color_gui = '#363636'
+let g:indentLine_noConcealCursor=1
+" }}}
+
+" ### Commentary: Makes comments easy peasy ############################## {{{
+Plug 'tpope/vim-commentary'
+" }}}
+
+" ### Ack.vim: Integrates ack and ag in VIM ############################## {{{
+Plug 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
+" }}}
+
 " #### Colors ############################################################ {{{
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
