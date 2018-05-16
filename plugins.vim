@@ -73,17 +73,29 @@ let g:ale_linters = {
 \}
 " }}}
 
-" #### VIM-Test: Test suite runner ####################################### {{{
-Plug 'fisadev/vim-isort'
+" #### VIM-isort: Sort Imports fo Python ################################ {{{
+Plug 'fisadev/vim-isort', {'for': ['python']}
 let g:vim_isort_python_version = 'python3'
 " }}}
 
-" #### Syntastic: Syntatic checker ####################################### {{{
-Plug 'scrooloose/syntastic'
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_check_on_open = 1
-let g:syntastic_loc_list_height = 3
+" #### VIM-Test: Test suite runner ####################################### {{{
+Plug 'janko-m/vim-test'
+
+let test#strategy = 'basic'
+let test#python#runner = 'pytest'
+let test#python#pytest#executable = 'pytest'
+
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
+
+nmap <silent> <leader>vtn :TestNearest -vv<CR>
+nmap <silent> <leader>vtf :TestFile -vv<CR>
+nmap <silent> <leader>vts :TestSuite -vv<CR>
+nmap <silent> <leader>vtl :TestLast -vv<CR>
+nmap <silent> <leader>vtv :TestVisit -vv<CR>
 " }}}
 
 " #### Rainbow: Rainbow parenthesis ###################################### {{{
