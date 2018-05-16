@@ -206,6 +206,11 @@ Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
 let python_highlight_all=1
 " }}}
 
+" ### Colorizer: Highlight RGB colors #################################### {{{
+Plug 'lilydjwg/colorizer'
+let g:colorizer_nomap=1
+" }}}
+
 " #### Colors ############################################################ {{{
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
