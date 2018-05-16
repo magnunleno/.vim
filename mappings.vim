@@ -12,10 +12,16 @@ if has("gui_running")
 "}}}
 else
 "{{{ Terminal VIM mappings only
-    " Next buffer
-    nnoremap <leader>< :bp<CR>
     " Previews buffer
+    nnoremap <leader>< :bp<CR>
+    " Next buffer
     nnoremap <leader>> :bn<CR>
+    " Previews Tab
+    nnoremap <leader>[ :tabprevious<CR>
+    " Next Tab
+    nnoremap <leader>] :tabnext<CR>
+    " Close buffer without destroying window
+    nnoremap <leader> :BD<CR>
 "}}}
 endif
 
@@ -91,6 +97,7 @@ nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(st
 " Show current search in cwindow
 nnoremap <leader>\ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
+" Source current line
 nnoremap <leader>S ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
 
 " Opens and closes folds with Space bar
@@ -113,14 +120,33 @@ nnoremap <leader>Va ggVG
 "    println()foo
 nnoremap zl :let @z=@"<cr>x$p:let @"=@z<cr>
 
-" VIM Grep word under the cursor
-nnoremap <leader>g "ayiw:vimgrep "a" **/*.py
+" Shortcut to edit a file in the same directory
+nnoremap <leader>e/ :e %:h/
 
+" Shortcut to edit a file in the previews directory
+nnoremap <leader>e. e %:h/
+
+
+" VIM Grep word under the cursor
+if exists("g:ackprg")
+	nnoremap <leader>g "ayiw:Ack "a"
+else
+	nnoremap <leader>g "ayiw:vimgrep "a" **/*
+endif
+
+" Search All TODO comments in .py files
+noremap <Leader>t :noautocmd vimgrep /TODO/j **/*.py<CR>:cw<CR>
 " ######################################################################## }}}
 
 " #### C Mappings ######################################################## {{{
 " Saves as ROOT
 cnoremap w!! w !sudo tee % >/dev/null
+
+" Shortcut to edit a file in the same directory
+"cnoremap :E e %:h/
+
+" Shortcut to edit a file in the previews directory
+"cnoremap EE e %:h/
 
 " Ctrl-a and Ctrl-e works in Command line
 cnoremap <C-a> <Home>
@@ -169,3 +195,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
     \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
     \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " ######################################################################## }}}
+
+
+nnoremap <leader>. :CtrlPTag<CR>
