@@ -46,12 +46,12 @@ nnoremap <silent> <leader>es :UltiSnipsEdit<CR>
 Plug 'kshenoy/vim-signature'
 " }}}
 
-" #### delimitMate: Automatically adds delimits ########################## {{{
-Plug 'Raimondi/delimitMate'
-let b:delimitMate_expand_cr=1
-let b:delimitMate_expand_space=1
-let b:delimitMate_expand_inside_quotes=1
-" }}}
+" #### DelimitMate: Automatically adds pairs ################################## {{{
+"Plug 'Raimondi/delimitMate'
+" let b:delimitMate_expand_cr=1
+" let b:delimitMate_expand_space=1
+" let b:delimitMate_expand_inside_quotes=1
+"}}}
 
 " #### list-text-object: Creates Argument object ######################### {{{
 Plug 'jesseschalken/list-text-object'
