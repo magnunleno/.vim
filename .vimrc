@@ -6,6 +6,8 @@
 " Copyright: GPLv3
 " Description: List of settings for VIM setup
 
+set conceallevel=1
+
 " I don't like \ as a leader.
 let mapleader=","
 
