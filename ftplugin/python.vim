@@ -59,3 +59,5 @@ if exists("g:ackprg")
 else
 	nnoremap <buffer><leader>g "ayiw:vimgrep "a" **/*.py
 endif
+
+set makeprg=flake8
