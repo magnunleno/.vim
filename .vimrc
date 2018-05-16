@@ -100,7 +100,7 @@ set shiftround
 " Complet matching text and show list
 set wildmode=list:longest
 " Disable preview window (faster navigation in completitions)
-set completeopt-=preview
+set completeopt=longest,menuone
 " Automatically read a file that has changed on disk
 set autoread
 " String to put at the start of lines that have been wrapped "
