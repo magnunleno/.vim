@@ -144,3 +144,10 @@ augroup line_return
         \     execute 'normal! g`"zvzz' |
         \ endif
 augroup END
+
+" fix typos
+command WQ wq
+command Wq wq
+command W w
+command Q q
+command QW wq
