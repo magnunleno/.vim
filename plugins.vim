@@ -1,4 +1,10 @@
 call plug#begin('~/.vim-plugins')
+"
+" #### JavaScript Syntax ################################################ {{{
+Plug 'pangloss/vim-javascript'
+Plug 'othree/javascript-libraries-syntax.vim'
+let g:used_javascript_libs = 'vue,jquery,underscore'
+" }}}
 
 " #### VIM Vue.js: Syntax ############################################### {{{
 Plug 'posva/vim-vue'
@@ -125,10 +131,7 @@ let g:rainbow_conf = {
 \            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
 \        },
 \        'javascript': {
-\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\        },
-\        'lisp': {
-\            'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/'],
 \        },
 \        'vim': {
 \            'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
