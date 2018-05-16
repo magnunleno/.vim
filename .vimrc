@@ -114,6 +114,11 @@ set formatoptions+=1
 " Remove a comment leader when joining lines
 set formatoptions+=j
 
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 
 " Settigns for specific filetype
 augroup filetypedetect
