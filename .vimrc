@@ -68,7 +68,7 @@ set cursorline
 " Tells vim to let 4 lines beforescrolling
 set scrolloff=4
 " Tells vim to break lines that exceeds the 'textwidth'
-set wrap linebreak
+set nowrap linebreak
 " Always shows the status line
 set laststatus=2
 " Eable folding and set it to use the marker
