@@ -1,5 +1,9 @@
 call plug#begin('~/.vim-plugins')
 
+" #### VIM Vue.js: Syntax ############################################### {{{
+Plug 'posva/vim-vue'
+" }}}
+
 " #### Airline: A nice and light status line ############################# {{{
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
