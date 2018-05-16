@@ -1,30 +1,23 @@
 call plug#begin('~/.vim-plugins')
 
 " #### Airline: A nice and light status line ############################# {{{
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 function! Myffenc()
   return printf('%s%s', &ff, strlen(&fenc) > 0 ? ' ['.&fenc.']' : '')
 endfunction
 
+let g:airline#extensions#tagbar#enabled = 0
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline_symbols.paste = 'ρ'
 let g:airline_mode_map = {'__' : '-', 'n'  : 'N', 'i'  : 'I', 'R'  : 'R',
     \ 'c'  : 'C', 'v'  : 'V', 'V'  : 'V', '' : 'V', 's'  : 'S', 'S'  : 'S',
     \ '' : 'S', }
-let g:airline_theme='powerlineish'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep = '⮀'
-let g:airline#extensions#tabline#left_alt_sep = '⮁'
 let g:airline_section_z = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold# %l%#__restore__#:%c"
 let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
 "}}}
