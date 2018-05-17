@@ -163,3 +163,6 @@ command Wq wq
 command W w
 command Q q
 command QW wq
+
+" Highlight Trailing Whitespaces
+match ErrorMsg /\s\+$/
