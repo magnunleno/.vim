@@ -2,8 +2,8 @@ call plug#begin('~/.vim-plugins')
 
 " #### Languages Syntax & Fixers ######################################## {{{
 " JS
-Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'pangloss/vim-javascript', {'for': ['javascript']}
+" Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript']}
 let g:used_javascript_libs = 'vue,jquery,underscore'
 
 " Vue.js
