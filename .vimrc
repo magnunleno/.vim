@@ -29,8 +29,6 @@ set hlsearch incsearch smartcase
 " Set VIM to use 256 colors
 set t_Co=256
 
-set background=dark
-
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_improved_warnings=1
@@ -40,6 +38,7 @@ let g:gruvbox_vert_split='dark0_hard'
 let g:gruvbox_sign_column='dark0_hard'
 let g:gruvbox_color_column='dark0'
 
+set background=dark
 let g:gruvbox_invert_selection=0
 colorscheme gruvbox
 
