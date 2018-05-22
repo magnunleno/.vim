@@ -156,6 +156,8 @@ inoremap <expr><C-k> pumvisible() ?   "\<C-p>" : "\<C-k>"
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 let g:neosnippet#enable_completed_snippet = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 imap <c-space>     <Plug>(neosnippet_expand_or_jump)
 smap <c-space>     <Plug>(neosnippet_expand_or_jump)
 xmap <c-space>     <Plug>(neosnippet_expand_target)
