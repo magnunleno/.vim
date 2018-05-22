@@ -35,17 +35,15 @@ if (has("termguicolors"))
 endif
 
 " Colorscheme Material Monokai
-colorscheme material-monokai
+colorscheme material-monokai+
 set background=dark
-let g:materialmonokai_italic=1
-let g:materialmonokai_gui_italic=1
-let g:materialmonokai_subtle_spell=1
+let g:materialmonokai_italic = 1
+let g:materialmonokai_gui_italic = 1
+let g:materialmonokai_subtle_spell = 1
 let g:materialmonokai_subtle_airline = 1
 let g:materialmonokai_custom_lint_indicators=1
 let g:airline_theme='materialmonokai'
 
-" Small fixes in Material-Monokai
-hi MatchParen     guifg=#e73c50 guibg=NONE gui=bold
 " Highlight Trailing Whitespaces
 match Error /\s\+$/
 
