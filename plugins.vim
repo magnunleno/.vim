@@ -12,6 +12,9 @@ let g:used_javascript_libs = 'vue,jquery,underscore'
 " Vue.js
 Plug 'posva/vim-vue'
 
+" HTML5
+Plug 'othree/html5.vim'
+
 " Python
 Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
@@ -36,7 +39,6 @@ endfunction
 let g:airline_powerline_fonts = 0
 let g:airline_symbols = {}
 let g:airline_mode_map = {'__' : '-', 'n'  : 'N', 'i'  : 'I', 'R'  : 'R', 'c'  : 'C', 'v'  : 'V', 'V'  : 'V', '' : 'V', 's'  : 'S', 'S'  : 'S', '' : 'S', }
-let g:airline_theme='gruvbox'
 let g:airline_section_z = "%3p%% %{g:airline_symbols.linenr}%#__accent_bold# %l%#__restore__#:%c"
 let g:airline_section_y = "%{airline#util#wrap(Myffenc(),0)}"
 let g:airline#extensions#tagbar#enabled = 0

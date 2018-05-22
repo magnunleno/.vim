@@ -35,14 +35,15 @@ if (has("termguicolors"))
 endif
 
 " Colorscheme Material Monokai
-colorscheme material-monokai+
-set background=dark
 let g:materialmonokai_italic = 1
 let g:materialmonokai_gui_italic = 1
 let g:materialmonokai_subtle_spell = 1
 let g:materialmonokai_subtle_airline = 1
 let g:materialmonokai_custom_lint_indicators=1
 let g:airline_theme='materialmonokai'
+
+colorscheme material-monokai+
+set background=dark
 
 " Highlight Trailing Whitespaces
 match Error /\s\+$/
@@ -57,8 +58,6 @@ if has("gui_running")
     set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
 endif
 
-
-" Set dark background
 " Shows line numbers
 set number
 " Always shows the ruler (cursor position and etc)
@@ -167,3 +166,12 @@ command Wq wq
 command W w
 command Q q
 command QW wq
+
+" Highlight Trailing Whitespaces
+match ErrorMsg /\s\+$/
+
+try
+  source ~/.vim_localrc
+catch
+  " No local config
+endtry
