@@ -229,6 +229,7 @@ Plug 'tpope/vim-commentary'
 " }}}
 
 " #### ColorSchemes ##################################################### {{{
+Plug 'skielbasa/vim-material-monokai'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
 Plug 'vim-scripts/BusyBee'

@@ -29,19 +29,25 @@ set hlsearch incsearch smartcase
 " Set VIM to use 256 colors
 set t_Co=256
 
+" Set termquicolors (Truecolor) for terminal, if supported
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+" Colorscheme Material Monokai
+colorscheme material-monokai
 set background=dark
+let g:materialmonokai_italic=1
+let g:materialmonokai_gui_italic=1
+let g:materialmonokai_subtle_spell=1
+let g:materialmonokai_subtle_airline = 1
+let g:materialmonokai_custom_lint_indicators=1
+let g:airline_theme='materialmonokai'
 
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_improved_warnings=1
-let g:gruvbox_invert_indent_guides=1
-
-let g:gruvbox_vert_split='dark0_hard'
-let g:gruvbox_sign_column='dark0_hard'
-let g:gruvbox_color_column='dark0'
-
-let g:gruvbox_invert_selection=0
-colorscheme gruvbox
+" Small fixes in Material-Monokai
+hi MatchParen     guifg=#e73c50 guibg=NONE gui=bold
+" Highlight Trailing Whitespaces
+match Error /\s\+$/
 
 if has("gui_running")
     " No toolbar or Menu (someone use it?)
@@ -163,6 +169,3 @@ command Wq wq
 command W w
 command Q q
 command QW wq
-
-" Highlight Trailing Whitespaces
-match ErrorMsg /\s\+$/
