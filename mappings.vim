@@ -23,6 +23,23 @@ else
 "}}}
 endif
 
+"#### Auxiliary functions ################################################ {{{
+fun! VtrCallDjangoShell()
+	execute "VtrOpenRunner"
+	execute "VtrSendCommandToRunner pipenv run ./manage.py shell"
+endfunction
+
+fun! VtrCallDjangoShellPlus()
+	execute "VtrOpenRunner"
+	execute "VtrSendCommandToRunner pipenv run ./manage.py shell_plus"
+endfunction
+
+fun! VtrCallPythonShell()
+	execute "VtrOpenRunner"
+	execute "VtrSendCommandToRunner python"
+endfunction
+"}}}
+
 " #### Disabling Keys #################################################### {{{
 " Disable F1
 noremap <F1> <nop>
@@ -141,6 +158,11 @@ nnoremap <silent> <C-w>o :only<CR>
 " Move between ALE errors
 nmap <silent> <leader>lp <Plug>(ale_previous_wrap)
 nmap <silent> <leader>ln <Plug>(ale_next_wrap)
+
+" Open NeoVIM Terminal With Python
+nnoremap <leader>sdp :call VtrCallDjangoShellPlus()<CR>
+nnoremap <leader>sd :call VtrCallDjangoShell()<CR>
+nnoremap <leader>sp :call VtrCallPython()<CR>
 " ######################################################################## }}}
 
 " #### C Mappings ######################################################## {{{
@@ -201,5 +223,10 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
     \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " ######################################################################## }}}
 
+" #### NeoVIM Terminal Mappings ########################################## {{{
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
+" }}}
 
 nnoremap <leader>. :CtrlPTag<CR>

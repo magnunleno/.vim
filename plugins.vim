@@ -189,6 +189,8 @@ let g:ctrlp_custom_ignore = {
 """""""""""""""""""""""""""""""""""""""""
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
+
+Plug 'christoomey/vim-tmux-runner'
 " }}}
 
 " #### Misc ############################################################# {{{
@@ -201,9 +203,9 @@ vmap s S
 """""""""""""""""""""""""""""""
 Plug 'janko-m/vim-test'
 Plug 'reinh/vim-makegreen'
-let test#strategy = 'makegreen'
-let test#python#runner = 'pytest'
-let test#python#pytest#executable = 'pytest'
+let test#strategy = ''
+let test#python#runner = 'vtr'
+let test#python#pytest#executable = 'pipenv run pytest'
 
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
