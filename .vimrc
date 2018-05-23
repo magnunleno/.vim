@@ -55,7 +55,7 @@ if has("gui_running")
     " No left and right scrollbar
     set guioptions-=r
     set guioptions-=L
-    set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
+    set guifont=Hurmit\ Nerd\ Font\ Mono\ Medium\ 10
 endif
 
 " Shows line numbers
