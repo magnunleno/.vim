@@ -25,16 +25,19 @@ endif
 
 "#### Auxiliary functions ################################################ {{{
 fun! VtrCallDjangoShell()
+	execute "VtrKillRunner"
 	execute "VtrOpenRunner"
 	execute "VtrSendCommandToRunner pipenv run ./manage.py shell"
 endfunction
 
 fun! VtrCallDjangoShellPlus()
+	execute "VtrKillRunner"
 	execute "VtrOpenRunner"
 	execute "VtrSendCommandToRunner pipenv run ./manage.py shell_plus"
 endfunction
 
 fun! VtrCallPythonShell()
+	execute "VtrKillRunner"
 	execute "VtrOpenRunner"
 	execute "VtrSendCommandToRunner python"
 endfunction
@@ -162,7 +165,7 @@ nmap <silent> <leader>ln <Plug>(ale_next_wrap)
 " Open NeoVIM Terminal With Python
 nnoremap <leader>sdp :call VtrCallDjangoShellPlus()<CR>
 nnoremap <leader>sd :call VtrCallDjangoShell()<CR>
-nnoremap <leader>sp :call VtrCallPython()<CR>
+nnoremap <leader>sp :call VtrCallPythonShell()<CR>
 " ######################################################################## }}}
 
 " #### C Mappings ######################################################## {{{
