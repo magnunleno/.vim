@@ -133,52 +133,52 @@ endif
 
 " #### Autocomplete & Snipepts ########################################## {{{
 if has('nvim')
-    " Deoplete: Autocompelte for NeoVIM & VIM8 "
-    """"""""""""""""""""""""""""""""""""""""""""
-    function! DoRemote(arg)
-      UpdateRemotePlugins
-    endfunction
-    Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-    Plug 'Shougo/context_filetype.vim'
-    Plug 'zchee/deoplete-jedi', {'for': 'python'}
-    let g:deoplete#enable_at_startup = 1
+  " Deoplete: Autocompelte for NeoVIM & VIM8 "
+  """"""""""""""""""""""""""""""""""""""""""""
+  function! DoRemote(arg)
+    UpdateRemotePlugins
+  endfunction
+  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  Plug 'Shougo/context_filetype.vim'
+  Plug 'zchee/deoplete-jedi', {'for': 'python'}
+  let g:deoplete#enable_at_startup = 1
 
-    " Cicle through mappings with <tab>
-    let g:deoplete#sources#jedi#enable_cache = 1
-    let g:deoplete#sources#jedi#show_docstring = 1
+  " Cicle through mappings with <tab>
+  let g:deoplete#sources#jedi#enable_cache = 1
+  let g:deoplete#sources#jedi#show_docstring = 1
 
-    let g:deoplete#omni_patterns = {}
-    let g:deoplete#omni_patterns.jinja = ['<', '<[^>]*\s[[:alnum:]-]*']
+  let g:deoplete#omni_patterns = {}
+  let g:deoplete#omni_patterns.jinja = ['<', '<[^>]*\s[[:alnum:]-]*']
 
-    inoremap <expr><C-j> pumvisible() ?   "\<C-n>" : "\<C-j>"
-    inoremap <expr><C-k> pumvisible() ?   "\<C-p>" : "\<C-k>"
+  inoremap <expr><C-j> pumvisible() ?   "\<C-n>" : "\<C-j>"
+  inoremap <expr><C-k> pumvisible() ?   "\<C-p>" : "\<C-k>"
 
-    " NeoSnippet: Yet Another Snippets plugin "
-    """""""""""""""""""""""""""""""""""""""""""
-    Plug 'Shougo/neosnippet'
-    Plug 'Shougo/neosnippet-snippets'
-    let g:neosnippet#enable_completed_snippet = 1
-    " Tell Neosnippet about the other snippets
-    let g:neosnippet#snippets_directory='~/.vim/snippets'
-    imap <c-space>     <Plug>(neosnippet_expand_or_jump)
-    smap <c-space>     <Plug>(neosnippet_expand_or_jump)
-    xmap <c-space>     <Plug>(neosnippet_expand_target)
+  " NeoSnippet: Yet Another Snippets plugin "
+  """""""""""""""""""""""""""""""""""""""""""
+  Plug 'Shougo/neosnippet'
+  Plug 'Shougo/neosnippet-snippets'
+  let g:neosnippet#enable_completed_snippet = 1
+  " Tell Neosnippet about the other snippets
+  let g:neosnippet#snippets_directory='~/.vim/snippets'
+  imap <c-space>     <Plug>(neosnippet_expand_or_jump)
+  smap <c-space>     <Plug>(neosnippet_expand_or_jump)
+  xmap <c-space>     <Plug>(neosnippet_expand_target)
 
-    " Jedi-VIM: Python Autocompletion "
-    """""""""""""""""""""""""""""""""""
-    Plug 'davidhalter/jedi-vim', {'for': 'python'}
-    let g:jedi#completions_enabled = 0
-    let g:jedi#show_call_signatures = 2
+  " Jedi-VIM: Python Autocompletion "
+  """""""""""""""""""""""""""""""""""
+  Plug 'davidhalter/jedi-vim', {'for': 'python'}
+  let g:jedi#completions_enabled = 0
+  let g:jedi#show_call_signatures = 2
 
-    " Makes Deoplete#Jedi work with pipenv
-    " Kudos to: https://www.linkedin.com/pulse/can-vim-detect-pipenv-environment-vagiz-duseev
-    let pipenv_venv_path = system('pipenv --venv')
-    if shell_error == 0
-      let venv_path = substitute(pipenv_venv_path, '\n', '', '')
-      let g:deoplete#sources#jedi#python_path = venv_path . '/bin/python'
-    else
-      let g:deoplete#sources#jedi#python_path = 'python'
-    endif
+  " Makes Deoplete#Jedi work with pipenv
+  " Kudos to: https://www.linkedin.com/pulse/can-vim-detect-pipenv-environment-vagiz-duseev
+  let pipenv_venv_path = system('pipenv --venv')
+  if shell_error == 0
+    let venv_path = substitute(pipenv_venv_path, '\n', '', '')
+    let g:deoplete#sources#jedi#python_path = venv_path . '/bin/python'
+  else
+    let g:deoplete#sources#jedi#python_path = 'python'
+  endif
 endif
 
 " AutoPairs: Automatically adds pairs
