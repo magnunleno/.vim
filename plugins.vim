@@ -16,9 +16,8 @@ Plug 'posva/vim-vue'
 Plug 'othree/html5.vim'
 
 " Python
-Plug 'hdima/python-syntax', {'for': ['python', 'jinja']}
+Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
-let python_highlight_all=1
 Plug 'fisadev/vim-isort', {'for': ['python']}
 let g:vim_isort_python_version = 'python3'
 
