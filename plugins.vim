@@ -1,5 +1,3 @@
-call plug#begin('~/.vim-plugins')
-
 " #### Languages Syntax & Fixers ######################################## {{{
 " JS
 Plug 'pangloss/vim-javascript', {'for': ['javascript']}
@@ -282,5 +280,3 @@ Plug 'rakr/vim-one'
 " let b:delimitMate_expand_space=1
 " let b:delimitMate_expand_inside_quotes=1
 " }}}
-
-call plug#end()

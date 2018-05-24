@@ -1,10 +1,11 @@
-"""""""""""""""""""""""""""""""""" My VIMRC """"""""""""""""""""""""""""""""""
+" ################################ My VIMRC ############################# {{{
 " vim: et:tw=79:sw=4:ts=4:sts=4
 "
 " File: ~/.vimrc
 " Author: Magnun Leno <magnun dot leno at gmail dot com>
 " Copyright: GPLv3
 " Description: List of settings for VIM setup
+" }}}
 
 set conceallevel=1
 
@@ -12,7 +13,9 @@ set conceallevel=1
 let mapleader=","
 
 " Plugins
+call plug#begin('~/.vim-plugins')
 source ~/.vim/plugins.vim
+call plug#end()
 let $PLUGINS='~/.vim/plugins.vim'
 
 " Mappings
