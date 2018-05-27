@@ -61,3 +61,13 @@ else
 endif
 
 set makeprg=flake8
+
+" Makes Deoplete#Jedi work with pipenv
+" Kudos to: https://www.linkedin.com/pulse/can-vim-detect-pipenv-environment-vagiz-duseev
+let g:pipenv_venv_path = system('pipenv --venv')
+if shell_error == 0
+  let venv_path = substitute(g:pipenv_venv_path, '\n', '', '')
+  let g:deoplete#sources#jedi#python_path = venv_path . '/bin/python'
+else
+  let g:deoplete#sources#jedi#python_path = 'python'
+endif

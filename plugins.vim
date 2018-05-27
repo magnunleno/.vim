@@ -167,16 +167,6 @@ if has('nvim')
   Plug 'davidhalter/jedi-vim', {'for': 'python'}
   let g:jedi#completions_enabled = 0
   let g:jedi#show_call_signatures = 2
-
-  " Makes Deoplete#Jedi work with pipenv
-  " Kudos to: https://www.linkedin.com/pulse/can-vim-detect-pipenv-environment-vagiz-duseev
-  let pipenv_venv_path = system('pipenv --venv')
-  if shell_error == 0
-    let venv_path = substitute(pipenv_venv_path, '\n', '', '')
-    let g:deoplete#sources#jedi#python_path = venv_path . '/bin/python'
-  else
-    let g:deoplete#sources#jedi#python_path = 'python'
-  endif
 endif
 
 " AutoPairs: Automatically adds pairs
