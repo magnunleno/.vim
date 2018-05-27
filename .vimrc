@@ -13,14 +13,18 @@ set conceallevel=1
 let mapleader=","
 
 " Plugins
-call plug#begin('~/.vim-plugins')
-source ~/.vim/plugins.vim
-call plug#end()
 let $PLUGINS='~/.vim/plugins.vim'
+call plug#begin('~/.vim-plugins')
+source $PLUGINS
+call plug#end()
+
+" Functions
+let $MAPPINGS='~/.vim/functions.vim'
+source $MAPPINGS
 
 " Mappings
-source ~/.vim/mappings.vim
 let $MAPPINGS='~/.vim/mappings.vim'
+source $MAPPINGS
 
 set nocompatible
 filetype plugin indent on
