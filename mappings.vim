@@ -23,26 +23,6 @@ else
 "}}}
 endif
 
-"#### Auxiliary functions ################################################ {{{
-fun! VtrCallDjangoShell()
-	execute "VtrKillRunner"
-	execute "VtrOpenRunner"
-	execute "VtrSendCommandToRunner pipenv run ./manage.py shell"
-endfunction
-
-fun! VtrCallDjangoShellPlus()
-	execute "VtrKillRunner"
-	execute "VtrOpenRunner"
-	execute "VtrSendCommandToRunner pipenv run ./manage.py shell_plus"
-endfunction
-
-fun! VtrCallPythonShell()
-	execute "VtrKillRunner"
-	execute "VtrOpenRunner"
-	execute "VtrSendCommandToRunner python"
-endfunction
-"}}}
-
 " #### Disabling Keys #################################################### {{{
 " Disable F1
 noremap <F1> <nop>
