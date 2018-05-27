@@ -175,7 +175,7 @@ let g:AutoPairsFlyMode = 1
 let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`', '<': '>'}
 " }}}
 
-" #### Search & Find #################################################### {{{
+" #### Search, Find & Dispatch ######################################### {{{
 " CtrlP: Fuzzy finder "
 """""""""""""""""""""""
 Plug 'ctrlpvim/ctrlp.vim'
@@ -189,7 +189,14 @@ let g:ctrlp_custom_ignore = {
 Plug 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
 
+" VIM Tmux Runner: Dispatch commands in tmux pane "
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'christoomey/vim-tmux-runner'
+
+" AsyncRun: Run async commands and redirect to quickfix window "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'skywind3000/asyncrun.vim'
+:let g:asyncrun_open = 8
 " }}}
 
 " #### Misc ############################################################# {{{
@@ -201,9 +208,8 @@ vmap s S
 " VIM-Test: Test suite runner "
 """""""""""""""""""""""""""""""
 Plug 'janko-m/vim-test'
-Plug 'reinh/vim-makegreen'
-let test#strategy = ''
-let test#python#runner = 'vtr'
+let test#strategy = 'asyncrun'
+let test#python#runner = 'pytest'
 let test#python#pytest#executable = 'pipenv run pytest'
 
 nmap <silent> <leader>tn :TestNearest<CR>
