@@ -99,8 +99,8 @@ let g:rainbow_conf = {
 " GitGutter: Marks for git adds and removals "
 """"""""""""""""""""""""""""""""""""""""""""""
 Plug 'airblade/vim-gitgutter'
-nnoremap <silent> ]h :GitGutterNextHunk<CR>
-nnoremap <silent> [h :GitGutterPrevHunk<CR>
+nnoremap <silent> ]g :GitGutterNextHunk<CR>:GitGutterPreviewHunk<CR>
+nnoremap <silent> [g :GitGutterPrevHunk<CR>:GitGutterPreviewHunk<CR>
 nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
 nnoremap <silent> <leader>gr :GitGutterRevertHunk<CR>
 nnoremap <silent> <leader>gp :GitGutterPreviewHunk<CR>
