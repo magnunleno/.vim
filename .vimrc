@@ -65,6 +65,8 @@ if has("gui_running")
     set guifont=Hurmit\ Nerd\ Font\ Mono\ Medium\ 10
 endif
 
+" Enables Mouse. On TMUX use 'set -g mouse on'
+set mouse=a
 " Shows line numbers
 set number
 " Always shows the ruler (cursor position and etc)
