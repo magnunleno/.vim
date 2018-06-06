@@ -7,7 +7,7 @@
 " Description: List of settings for VIM setup
 " }}}
 
-set conceallevel=1
+set conceallevel=2
 
 " I don't like \ as a leader.
 let mapleader=","
