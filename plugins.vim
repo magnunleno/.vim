@@ -237,6 +237,9 @@ nnoremap <silent> <leader><Backspace> :BD<CR>
 " Commentary: Makes comments easy peasy "
 """""""""""""""""""""""""""""""""""""""""
 Plug 'tpope/vim-commentary'
+
+" Fugitive: Git Helper by Tim Pope "
+Plug 'tpope/vim-fugitive'
 " }}}
 
 " #### ColorSchemes ##################################################### {{{
