@@ -127,9 +127,9 @@ nnoremap <leader>e. e %:h/
 
 " VIM Grep word under the cursor
 if exists("g:ackprg")
-	nnoremap <leader>g "ayiw:Ack "a"
+	nnoremap <leader>* "ayiw:Ack "a"
 else
-	nnoremap <leader>g "ayiw:vimgrep "a" **/*
+	nnoremap <leader>* "ayiw:vimgrep "a" **/*
 endif
 
 " Search All TODO comments in .py files
