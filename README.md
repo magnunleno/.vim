@@ -1,38 +1,17 @@
-My VIM Setup
-============
+My Neovim Setup
+===============
 
-This is my current VIM setup. It's composed by a bunch of plugins, some mappings, colors, fonts and specific VIM settings.
+> **Note:** This branch is currently a work in progress (WIP).
 
-This setup is very Python/reStructured Text centric, since those are the main languages I use, but it can be easily adapted to other languages. There are some small settings for C and HTML.
+This is my current Neovim setup. It consists of a collection of plugins, custom key mappings, color schemes, fonts, and personalized settings.
 
-Any issue or feedback must be provided through the [issues page](https://github.com/magnunleno/.vim/issues)
+This configuration is heavily centered around Python/Flask and JS/Vue.js, as those are the main languages I use, though it can be easily adapted for other stacks. It also includes a few basic settings for C and Lua.
 
-Feel free to use, adapt, correct and evolve it.
+Please submit any issues or feedback through the [issues page](https://github.com/magnunleno/.vim/issues).
+
+Feel free to use, adapt, fix, and improve it.
 
 Testing
 -------
 
-To test this setup, backup you `.vim` folder and `.vimrc` file:
-
-```bash
-$ cd ~/
-$ VIMBKP=~/.vimbkp-`date +"%Y-%m-%d"`
-$ mkdir $VIMBKP
-$ mv ~/.vim $VIMBKP/
-$ mv ~/.vimrc $VIMBKP/
-```
-
-Optionally, backup your `.viminfo` and `.vimtags` too:
-
-```bash
-$ mv ~/.viminfo $VIMBKP/
-$ mv ~/.vimtags $VIMBKP/
-```
-
-
-After that, simply clone this repository and run `make deploy`:
-
-```bash
-$ git clone https://github.com/magnunleno/.vim.git ~/.vim
-$ cd ~/.vim && make deploy
-```
+Not documented yet.
