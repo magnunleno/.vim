@@ -1,7 +1,8 @@
 local opt = vim.opt
 
 -- Core
-opt.ff = 'unix'                    -- Enforce then Unix File Format
+opt.fileformats = { 'unix' }       -- Enforce then Unix File Format
+opt.fileformat = 'unix'            -- Enforce then Unix File Format
 opt.clipboard = 'unnamedplus'      -- Sincroniza o yank/paste com a área de transferência do SO
 opt.undofile = true                -- Salva histórico de Undo em disco mesmo após fechar o arquivo
 opt.swapfile = false               -- Disable backup and swapfile
