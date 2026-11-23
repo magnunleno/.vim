@@ -1,7 +1,7 @@
 return {
 	{ -- Floating file navigation
 		'stevearc/oil.nvim',
-		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
 		lazy = false,
 
 		opts = {
@@ -10,7 +10,7 @@ return {
 				padding = 10,
 				max_width = 100,
 				max_height = 0,
-				border = "rounded",
+				border = 'rounded',
 				win_options = {
 					winblend = 0,
 				},
@@ -22,7 +22,7 @@ return {
 			},
 			view_options = {
 				is_always_hidden = function(name, bufnr)
-					return vim.startswith(name, "__pycache__")
+					return vim.startswith(name, '__pycache__')
 				end,
 			}
 		},
@@ -51,8 +51,8 @@ return {
 	},
 
 	{ -- List & highlights TODO, FIX BUG e etc in comments
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		'folke/todo-comments.nvim',
+		dependencies = { 'nvim-lua/plenary.nvim' },
 		opts = {}
 	},
 
@@ -60,7 +60,7 @@ return {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
 		opts = {
-			-- options = { theme = "catppuccin" },
+			-- options = { theme = 'catppuccin' },
 		},
 	},
 }
