@@ -39,7 +39,7 @@ return {
 		},
 
 		keys = {
-			{ '<C-p>', '<cmd>Telescope git_files<cr>', desc = 'Fuzzi search in git files.' },
+			{ '<C-p>', '<cmd>Telescope git_files<cr>', desc = 'Fuzzy search in git files.' },
 			{ '<leader>ff', '<cmd>Telescope find_files<cr>', desc = 'Fuzzy search for file names.' },
 			{ '<leader>fg', '<cmd>Telescope live_grep<cr>', desc = 'Fuzzy search for file contents.' },
 			{ '<leader>fb', '<cmd>Telescope buffers<cr>', desc = 'Fuzzy search for buffers in Telescope.' },
