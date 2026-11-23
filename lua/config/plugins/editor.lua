@@ -9,4 +9,12 @@ return {
 			{ 's', 'S', mode = 'v', remap = true, desc = 'Surround plugin' }
 		}
 	},
+
+	{ -- Automatically closes HTML tags and helps changing tags
+		'windwp/nvim-ts-autotag',
+		event = 'InsertEnter',
+		opts = {
+			opts = { enable_close = true, enable_rename = true, enable_close_on_slash = true }
+		}
+	},
 }
