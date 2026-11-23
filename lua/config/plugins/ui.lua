@@ -49,4 +49,11 @@ return {
 			-- { '<leader>ff', function () require('telescope.builtin').find_files({ hidden = true, no_ignore = true }) end, desc = 'Find all files' }
 		}
 	},
+
+	{ -- List & highlights TODO, FIX BUG e etc in comments
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {}
+	},
+
 }
