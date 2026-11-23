@@ -78,4 +78,21 @@ return {
 			vim.notify = notify
 		end
 	},
+
+	{ -- Tabs
+		'akinsho/bufferline.nvim',
+		version = '*',
+		event = 'VeryLazy',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		opts = {
+			options = {
+				mode = 'tabs',
+				-- diagnostics = 'nvim_lsp',
+				separator_style = 'slant',
+				always_show_bufferline = false,
+				right_mouse_command = nil,
+				hover = { enabled = true, delay = 200, reveal = {'close'} },
+			}
+		}
+	},
 }
