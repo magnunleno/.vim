@@ -63,4 +63,19 @@ return {
 			-- options = { theme = 'catppuccin' },
 		},
 	},
+
+	{ -- Fancy notifications
+		'rcarriga/nvim-notify',
+		lazy = false,
+		opts = {
+			stages = 'fade',
+			render = 'compact',
+		},
+		config = function (_, opts)
+			local notify = require('notify')
+
+			notify.setup(opts)
+			vim.notify = notify
+		end
+	},
 }
