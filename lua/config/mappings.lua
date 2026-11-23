@@ -46,7 +46,7 @@ map('v', '<C-k>', ":m '<-2<CR>gv=gv", { desc = 'Move block up' })
 map('v', '<C-j>', ":m '>+1<CR>gv=gv", { desc = 'Move block down' })
 
 -- Map esc to exit insert mode in terminal
-map('t', '<Esc>', "<C-\\><C-n>", { desc = 'Exit insert mode in terminal' })
+map('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit insert mode in terminal' })
 
 -----------------------
 -- Disabled mappings --
